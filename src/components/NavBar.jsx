@@ -1,27 +1,26 @@
 import React from 'react';
 import { Nav, Navbar, Container } from 'react-bootstrap';
-import logo from '../assets/img/logo3.png';
-import Linkedin from '../assets/img/icons/linkedin.svg';
-import github from '../assets/img/icons/github.svg';
-import instagram from '../assets/img/icons/instagram.svg';
-import cv from '../assets/img/icons/cv.svg';
+import Linkedin from '../assets/img/icons/linkedinDark.svg';
+import github from '../assets/img/icons/githubDark.svg';
+import instagram from '../assets/img/icons/instagramDark.svg';
+import cv from '../assets/img/icons/cvDark.svg';
+import moon from '../assets/img/icons/moon.svg';
 import '../styles/NavBar.css';
 
 function NavBar() {
     const [activeLink, setActiveLink] = React.useState('home');
-    const [scrolled, setScrolled] = React.useState(false);
-
-    React.useEffect(() => {
-        const onScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
+    /*    const [scrolled, setScrolled] = React.useState(false);
+      React.useEffect(() => {
+            const onScroll = () => {
+                if (window.scrollY > 50) {
+                    setScrolled(true);
+                } else {
+                    setScrolled(false);
+                }
             }
-        }
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-    }, [])
+            window.addEventListener("scroll", onScroll);
+            return () => window.removeEventListener("scroll", onScroll);
+        }, []) */
 
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
@@ -29,10 +28,11 @@ function NavBar() {
 
 
     return (
-        <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+        <Navbar expand="lg" /* className={scrolled ? "scrolled" : ""} */>
             <Container>
                 <Navbar.Brand href="#home">
-                    <img src={logo} alt="logo" />
+                    {/* <img src={logo} alt="logo" /> */}
+                    <h3>EL-JOSE</h3>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
@@ -41,20 +41,19 @@ function NavBar() {
                     <Nav className="me-auto">
                         <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                         <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-                        <Nav.Link href="#education" className={activeLink === 'education' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('education')}>Education</Nav.Link>
                         <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+                        <Nav.Link href="#education" className={activeLink === 'education' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('education')}>Education</Nav.Link>
+                        <Nav.Link href="#Stack" className={activeLink === 'Stack' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Stack')}>Stack</Nav.Link>
+                        <Nav.Link href="#Contact" className={activeLink === 'Contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Contact')}>Contact</Nav.Link>
                     </Nav>
                     <span className='navbar-text'>
                         <div className='social-icon'>
-                            <a href='#'><img src={Linkedin}></img></a>
-                            <a href='#'><img src={github}></img></a>
-                            <a href='#'><img src={instagram}></img></a>
+                            <a href='https://www.linkedin.com/in/elmer-jose-mu%C3%B1oz-zu%C3%B1iga-563022240/'><img src={Linkedin}></img></a>
+                            <a href='https://github.com/Ejmz216'><img src={github}></img></a>
+                            <a href='https://www.instagram.com/eljose__mz/'><img src={instagram}></img></a>
                             <a href='#'><img src={cv}></img></a>
+                            <a href='#'><img src={moon}></img></a>
                         </div>
-                        <button className='vvd' onClick={() => console.log('connect')}>
-                            <span> Let's Connect!</span>
-                        </button>
-
                     </span>
                 </Navbar.Collapse>
             </Container>

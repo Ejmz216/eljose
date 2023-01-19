@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
 import headerImg from '../assets/img/header-img.svg';
+import waves from '../assets/img/layered-waves.svg';
 import { GiLightSabers } from 'react-icons/gi';
 
 function Banner() {
@@ -46,7 +47,7 @@ function Banner() {
     return (
         <section className='banner' id="home">
             <Container>
-                <Row className="align-iems-cente">
+                <Row className="align-iems-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className='tagline'> Welcome to my Portfolio </span>
                         <h1>{`Elmer Jose Muñoz Zúñiga `}<GiLightSabers/></h1><h2><span className='wrap'>- {text}</span></h2>
@@ -55,12 +56,12 @@ function Banner() {
                             I'm a student of life, for life, always ambitious and curious about the world around. I am very fond of Artificial Intelligence and its breakthroughs and impact on the future. I, also, like to develop applications that solve real-world problems using technologies I master and always thriving to learn new ones.
                             I'm actively looking for exploring opportunities and taking on challenges that might be a great boost for my career. </p>
                         <button onClick={() => console.log('connect')}>Lets connect <BsFillArrowRightCircleFill /></button>
+                    
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt='Header img' />
                     </Col>
                 </Row>
-
             </Container>
 
 
