@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/portfolio-elmer/static/css/main.c06ba5a7.css",
+    "main.js": "/portfolio-elmer/static/js/main.c48e3daa.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio-elmer/static/js/787.1ed0c42c.chunk.js",
+    "static/media/screen.png": "/portfolio-elmer/static/media/screen.b561415fd30758333c13.png",
+    "static/media/lego.png": "/portfolio-elmer/static/media/lego.ec213d52d4192f56c82d.png",
+    "static/media/portfolio.png": "/portfolio-elmer/static/media/portfolio.e38e471542caa8b40b42.png",
+    "static/media/catsapp.png": "/portfolio-elmer/static/media/catsapp.f2358ea0231263532b37.png",
+    "static/media/petlify.png": "/portfolio-elmer/static/media/petlify.8b20f73abfc467cdfab0.png",
+    "static/media/ptp.png": "/portfolio-elmer/static/media/ptp.889b99455f0847cdc49e.png",
+    "static/media/todo.png": "/portfolio-elmer/static/media/todo.97c53c52c548200e6246.png",
+    "static/media/header-img2.png": "/portfolio-elmer/static/media/header-img2.0b676a7513dd9cffe2ab.png",
+    "static/media/CentraNo2-Bold.ttf": "/portfolio-elmer/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/portfolio-elmer/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/portfolio-elmer/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/layered-waves-haikei2.svg": "/portfolio-elmer/static/media/layered-waves-haikei2.0a132f5c50857f3fe379.svg",
+    "static/media/instagramDark.svg": "/portfolio-elmer/static/media/instagramDark.21a14fe0fe03f6c27c88862ecf566de6.svg",
+    "static/media/github.svg": "/portfolio-elmer/static/media/github.de5a47b65b062a95250bb09693a1cade.svg",
+    "static/media/githubDark.svg": "/portfolio-elmer/static/media/githubDark.f8183c6c277fc2999b16504bbc700045.svg",
+    "static/media/instagram.svg": "/portfolio-elmer/static/media/instagram.08b285abb8e118b52637efa5d65c5367.svg",
+    "static/media/layered-peaks.svg": "/portfolio-elmer/static/media/layered-peaks.cecc469649ff1eeebb31.svg",
+    "static/media/cv2.svg": "/portfolio-elmer/static/media/cv2.0d106fe7d517fe96ef4bb084d70eafe4.svg",
+    "index.html": "/portfolio-elmer/index.html",
+    "static/media/cv.svg": "/portfolio-elmer/static/media/cv.651967dbb9538d7facd3d54720247317.svg",
+    "static/media/moon.svg": "/portfolio-elmer/static/media/moon.76cc9ce56ede1e53e01d50616adcd88b.svg",
+    "static/media/linkedinDark.svg": "/portfolio-elmer/static/media/linkedinDark.7c123b8e126eda4e71457aaea5c462c5.svg",
+    "static/media/linkedin.svg": "/portfolio-elmer/static/media/linkedin.721d5414c26365f117e71d46b6641cb2.svg",
+    "main.c06ba5a7.css.map": "/portfolio-elmer/static/css/main.c06ba5a7.css.map",
+    "main.c48e3daa.js.map": "/portfolio-elmer/static/js/main.c48e3daa.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio-elmer/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c06ba5a7.css",
+    "static/js/main.c48e3daa.js"
+  ]
+}
