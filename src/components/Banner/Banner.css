@@ -198,3 +198,11 @@ p a {
     }
 
 }
+@media (max-width: 500px) {
+
+    .banner {
+        margin-top: 0;
+        padding: 75px 0 100px 0;
+    }
+
+}
