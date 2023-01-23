@@ -9,10 +9,10 @@
             rgba(241, 249, 253, 1) 51%,
             rgba(240, 250, 252, 1) 100%); */
     background-image: url('../assets/img/layered-waves-haikei2.svg');
-    background-position: top 80% center;
+    background-position: top 100% center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    z-index: -1;
 }
 
 
@@ -31,7 +31,7 @@
 }
 
 .banner h1 {
-    font-size: 65px;
+    font-size: 45px;
     font-weight: 700;
     letter-spacing: 0.8px;
     line-height: 1;
@@ -39,28 +39,77 @@
     display: block;
 }
 
+p a {
+    color: #C52368 !important;
+}
+
+.banner h2 {
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 20px;
+    display: block;
+    color: #C52368 !important;
+
+}
+
 .banner p {
-    background: white;
-    padding: 10px;
-    text-align: justify;
+    background: transparent;
+    padding: 10px 10px 50px 10px;
+    text-align: left;
     text-justify: inter-word;
-    color:black;
-    font-size: 18px;
+    color: black;
+    font-size: 15px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     width: 96%;
 }
 
 .banner button {
-    color: #fff;
-    font-weight: 700;
-    font-size: 20px;
-    margin-top: 60px;
+    color: black;
+    font-weight: 300;
+    font-size: 25px;
+    padding: 10px 20px;
+    margin-bottom: 150px;
     letter-spacing: 0.8px;
-    display: flex;
+    position: relative;
     align-items: center;
+    background: transparent;
+    transition: 0.3s ease-in-out;
 }
 
+.banner button span {
+    z-index: 1;
+}
+
+.banner button::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, .8) 0%, rgba(226, 17, 67, .8) 100%);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.banner button:hover {
+    color: white;
+    z-index: 1;
+}
+
+.banner button:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+/*-----------*/
 .banner button svg {
     font-size: 25px;
     margin-left: 10px;
@@ -73,23 +122,79 @@
 }
 
 .banner img {
-    animation: updown 3s linear infinite;
+    background-size: cover;
+    box-shadow: inset 0 0 0 30px rgb(255 255 255 / 30%);
+    width: 80%;
+    height: auto;
+    animation: updown 3s ease-in-out infinite 1s;
 }
 
 @keyframes updown {
     0% {
+        border-radius: 60% 40% 30% 70% /60% 30% 70% 40%;
         transform: translateY(-20px);
     }
 
     50% {
+        border-radius: 30% 60% 70% 40% /50% 60% 30% 60%;
         transform: translateY(20px);
     }
 
     100% {
+        border-radius: 60% 40% 30% 70% /60% 30% 70% 40%;
         transform: translateY(-20px);
     }
 }
 
 .txt-rotate>.wrap {
     border-right: 0.08em solid #666;
+}
+
+
+@media (max-width: 1200px) and (min-width: 990px) {
+    .banner {
+        margin-top: 0;
+        padding: 100px 0 100px 0;
+    }
+
+    .banner p {
+        min-width: 960px;
+    }
+
+    .col-xl-5 {
+        position: relative;
+        left: 200px;
+        width: 55%;
+        height: auto;
+    }
+    .banner button {
+        margin-bottom: 50px !important;
+    }
+
+}
+
+@media (max-width: 987px) and (min-width: 769px) {
+
+    .col-md-6 {
+        width: 100%;
+        height: auto;
+    }
+    .col-xl-5 {
+        position: relative;
+        left: 100px;
+        width: 70%;
+        height: auto;
+    }
+    .banner button {
+        margin-bottom: 50px !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .banner button {
+        margin-bottom: 50px !important;
+    }
+
 }

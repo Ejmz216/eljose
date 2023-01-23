@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 
 import "../styles/card.css";
 
-function Card({ imageSource, title, text, url }) {
+function Card({ imageSource, title, text, url, color }) {
   return (
     <div className="card text-center bg-dark animate__animated animate__fadeInUp">
       <div className="overflow">
         <img src={imageSource} alt="a wallpaper" className="card-img-top" />
       </div>
-      <div className="card-body text-light">
+      <div className="card-body text-light" id={color}>
         <h4 className="card-title">{title}</h4>
         <p className="card-text text-secondary">{text}</p>
         <a

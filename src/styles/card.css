@@ -7,6 +7,10 @@
     background-repeat: no-repeat;
 }
 
+.bg-dark {
+    --bs-bg-opacity: 0;
+}
+
 .projects-container h3 {
     color: white;
     font-size: 40px;
@@ -14,6 +18,10 @@
     padding: 50px;
 }
 
+.card {
+    border-color: none !important;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 20%);
+}
 
 .card:hover {
     box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
@@ -21,13 +29,23 @@
 }
 
 .card-body {
-    padding: 2rem 0 !important;
-    min-height: 240px;
+    padding: 2rem !important;
+    min-height: 280px;
+    background-color: var(--idColor);
+    border-radius: 0px !important;
+    text-align: left;
+}
+
+.card-text,
+.card-title {
+    color: #07003A !important;
 }
 
 .card-text {
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0rem;
     font-size: 1rem;
+    text-align: left;
+
 }
 
 .overflow {
@@ -35,6 +53,7 @@
 }
 
 .card-img-top {
+    border-radius: 0em;
     object-fit: scale-down;
     transform: scale(1);
     transition: all 0.2s ease-in-out;
@@ -44,6 +63,54 @@
     transform: scale(0.8);
 }
 
-.col-md-4{
+.col-md-4 {
     padding: 10px;
+    border-radius: 0px;
+}
+
+.card a {
+    background-image: linear-gradient(60deg, #833ab4, #E21143);
+    background-clip: text;
+    color: transparent;
+    font-weight: 500;
+    bottom: 25px;
+    left: 10px;
+    position: absolute;
+
+}
+
+.card a:hover {
+    background-image: linear-gradient(60deg, #08a7ad, #3272dd);
+    background-clip: text;
+    color: transparent;
+}
+
+#id1,
+#id6 {
+    --idColor: #F4E6D7;
+}
+
+#id2,
+#id4 {
+    --idColor: #bddfd4;
+}
+
+#id3,
+#id5 {
+    --idColor: #E2E7FD;
+}
+
+
+@media (max-width: 990px) and (min-width: 769px) {
+
+    .card-text {
+        padding: 0.3rem 0rem;
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .card-title {
+        font-size: 20px;
+        font-weight: 450;
+    }
 }

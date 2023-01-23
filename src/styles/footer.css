@@ -1,14 +1,41 @@
 /************ Footer Css ************/
 .footer {
-	padding: 0 0 50px 0;
-    background: rgb(248, 248, 248);
-    background: linear-gradient(103deg,
-            rgba(248, 248, 248, 1) 0%,
-            rgba(241, 249, 253, 1) 51%,
-            rgba(240, 250, 252, 1) 100%);
+	padding: 15px 0 5px 0;
+	background: #161B22;
 }
 
-.newsletter-bx {
+.footer img {
+	width: 26%;
+}
+
+.footer p {
+	font-weight: 100;
+	font-size: 14px;
+	color: #f8f8f8;
+	letter-spacing: 0.5px;
+	margin-top: 10px;
+}
+
+#innerContainer,
+#mainFooter {
+	display: flex !important;
+	justify-content: center !important;
+
+}
+
+#innerContainer {
+	flex-direction: column !important;
+}
+
+#innerContainer .social-icon p{
+	text-align: center;
+	display:flex;
+	justify-content: center !important;
+}
+
+
+/*========= OPCIONAL =============*/
+/* .newsletter-bx {
 	background: #FFFFFF;
 	border-radius: 55px;
 	color: #121212;
@@ -74,15 +101,4 @@
 	letter-spacing: 0.5px;
 	border-radius: 18px;
 }
-
-.footer img {
-	width: 26%;
-}
-
-.footer p {
-	font-weight: 400;
-	font-size: 14px;
-	color: #B8B8B8;
-	letter-spacing: 0.5px;
-	margin-top: 20px;
-}
+ */
