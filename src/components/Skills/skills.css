@@ -1,0 +1,169 @@
+/************ Skills Css ************/
+.skills {
+    padding: 50px 0 50px 0;
+    background: #C52368;
+}
+
+.skill-bx {
+    background: white;
+    border-radius: 0px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+    border-bottom: transparent;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 50%);
+}
+
+.section_title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #4F2D98;
+    padding-bottom: 20px;
+}
+
+
+
+/*-------- inner layer --------------*/
+
+.skills_container {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    justify-content: center;
+    margin-top: 20px;
+    gap: 50px;
+}
+
+.skill_content {
+    background-color: #f0fafc;
+    border: 1px solid Orgba(0, 0, 0, 0.1);
+    padding: 10px 32px 16px 32px;
+    border-radius: 2px;
+    border-bottom: transparent;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 30%);
+
+}
+
+.skills_title {
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.skill_data,
+.main_data {
+    display: flex;
+    justify-content: left;
+    column-gap: 0.5rem;
+    align-items: center;
+
+}
+
+.skill_data {
+    column-gap: 1.5rem;
+}
+
+
+
+
+
+/*---------- Single skill  ------------*/
+
+.skills_name {
+    font-size: 15px;
+    font-weight: 300;
+    width: 80px;
+    color: #85829F;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.skills_icon {
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+}
+
+#color1 {
+    color: #2F74BF;
+}
+
+#color2 {
+    color: #569134;
+}
+
+#color3 {
+    color: #E13F33;
+}
+
+#color4 {
+    color: black;
+}
+
+#color5 {
+    color: #823AB4;
+}
+
+#color6 {
+    color: #EFD81D;
+}
+
+#color7 {
+    color: #C43838;
+}
+
+#color8 {
+    color: #5BD0EE;
+}
+
+/*============= Break points ==============*/
+
+@media screen and (max-width: 1400px) {
+    .skills_container {
+        grid-template-columns: repeat(2, 350px);
+        grid-row: 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .skills_container {
+        grid-template-columns: max-content;
+        grid-row: 2rem;
+    }
+
+    .skill_content {
+        padding: 20px 60px 20px 60px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .skills_container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .section_title {
+        font-size: 25px !important;
+    }
+    .section_subtitle
+    {
+        font-size: 13px;
+    }
+
+    .skill_inner_box {
+        column-gap: 5px;
+    }
+
+    .skills_name {
+        font-size: 10px !important;
+    }
+
+    .skills_title {
+        font-size: 15px !important;
+    }
+}

@@ -1,16 +1,16 @@
 import React from "react";
 
 import Card from "./Card";
-import '../styles/card.css';
+import './card.css';
 import { BsCodeSlash } from 'react-icons/bs';
 
-import screen from "../assets/img/projects/screen.png";
-import petlify from "../assets/img/projects/petlify.png";
-import catsapp from "../assets/img/projects/catsapp.png";
-import todo from "../assets/img/projects/todo.png";
-import ptp from "../assets/img/projects/ptp.png";
-import portfolio from "../assets/img/projects/portfolio.png";
-import lego from "../assets/img/projects/lego.png";
+import screen from "../../assets/img/projects/screen.png";
+import petlify from "../../assets/img/projects/petlify.png";
+import catsapp from "../../assets/img/projects/catsapp.png";
+import todo from "../../assets/img/projects/todo.png";
+import ptp from "../../assets/img/projects/ptp.png";
+import portfolio from "../../assets/img/projects/portfolio.png";
+import lego from "../../assets/img/projects/lego.png";
 
 const cards = [
   {

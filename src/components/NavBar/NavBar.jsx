@@ -1,11 +1,11 @@
 import React from 'react';
 import { Nav, Navbar, Container} from 'react-bootstrap';
-import Linkedin from '../assets/img/icons/linkedinDark.svg';
-import github from '../assets/img/icons/githubDark.svg';
-import instagram from '../assets/img/icons/instagramDark.svg';
-import cv from '../assets/img/icons/cvDark.svg';
-import moon from '../assets/img/icons/moon.svg';
-import '../styles/NavBar.css';
+import Linkedin from '../../assets/img/icons/linkedinDark.svg';
+import github from '../../assets/img/icons/githubDark.svg';
+import instagram from '../../assets/img/icons/instagramDark.svg';
+import cv from '../../assets/img/icons/cv2.svg';
+import moon from '../../assets/img/icons/moon.svg';
+import './navBar.css';
 
 function NavBar() {
     const [activeLink, setActiveLink] = React.useState('home');
@@ -45,7 +45,6 @@ function NavBar() {
                         <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
                         <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                         <Nav.Link href="#education" className={activeLink === 'education' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('education')}>Education</Nav.Link>
-                        <Nav.Link href="#Stack" className={activeLink === 'Stack' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Stack')}>Stack</Nav.Link>
                         <Nav.Link href="#Contact" className={activeLink === 'Contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Contact')}>Contact</Nav.Link>
                     </Nav>
                     <span className='navbar-text'>

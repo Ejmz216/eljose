@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "../styles/card.css";
+import "./card.css";
 
 function Card({ imageSource, title, text, url, color }) {
   return (

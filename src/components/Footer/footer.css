@@ -25,6 +25,7 @@
 
 #innerContainer {
 	flex-direction: column !important;
+	text-align: center !important;
 }
 
 #innerContainer .social-icon p{
@@ -35,6 +36,8 @@
 
 
 /*========= OPCIONAL =============*/
+
+
 /* .newsletter-bx {
 	background: #FFFFFF;
 	border-radius: 55px;
