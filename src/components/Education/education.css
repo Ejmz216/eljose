@@ -1,0 +1,192 @@
+#educationTitle {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #e5ebf2;
+}
+
+#educationSubtitle {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5ebf2;
+}
+
+
+.section {
+    padding-bottom: 6rem;
+}
+
+.qualification_container {
+    max-width: 768px;
+}
+
+.qualification_tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.qualification_button {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #4F2D98;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.qualification_button:hover {
+    color: #C52368;
+}
+
+.qualification_icon {
+    font-size: 1.8rem;
+    margin-right: 5px;
+}
+
+.qualification_active {
+    color: #C52368;
+}
+
+.qualification_sections {
+    display: grid;
+    grid-template-columns: 0.5fr;
+    justify-content: center;
+}
+
+.qualification_content {
+    display: none;
+}
+
+.qualification_content-active {
+    display: block;
+}
+
+.qualification_data {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+}
+
+.qualification_title {
+    background-image: linear-gradient(60deg, #833ab4, #E21143);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 1px;
+}
+
+.qualification_subtitle {
+    display: inline-block;
+    font-size: 0.875rem !important;
+    margin-bottom: 0.2rem;
+}
+
+.qualification_calender {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.qualification_links a {
+    text-decoration: none;
+    color: #229188;
+}
+
+.qualification_rounder {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: #73777B;
+    border-radius: 50%;
+}
+
+.qualification_line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: #73777B;
+    transform: translate(6px, -7px);
+}
+
+.q_space {
+    width: 350px;
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .qualification_data {
+        width: 80%;
+        gap: 0.5rem;
+        grid-template-columns: 0fr max-content 1fr;
+    }
+
+    .qualification_container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .qualification_container {
+        margin-left: 0.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .qualification_button {
+        margin: 0 0.75rem;
+        ;
+    }
+
+
+    .qualification_title {
+        font-size: 0.9rem !important;
+        width: 80%;
+    }
+
+    .qualification_subtitle {
+        font-size: 0.85rem !important;
+    }
+
+    .qualification_calender {
+        font-size: 0.85rem;
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 400px) {
+
+    .qualification_container {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+
+    .qualification_data {
+        width: 80%;
+        gap: 0.5rem;
+        grid-template-columns: 0fr max-content 1fr;
+    }
+
+    .qualification_title {
+        font-size: 0.8rem !important;
+    }
+
+    .qualification_subtitle,
+    .qualification_button,
+    .qualification_calender {
+        font-size: 0.75rem !important;
+    }
+
+    .qualification_icon {
+        font-size: 1.5rem;
+    }
+
+
+    .q_space {
+        width: 300px;
+    }
+}

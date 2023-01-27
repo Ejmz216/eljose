@@ -74,7 +74,8 @@ const cards = [
 function Cards() {
   return (
     <section className="projects-container">
-      <h3 id="projects"> Some Projets I've Built  <BsCodeSlash /></h3>
+      <h3 id="projects"> Projects <BsCodeSlash /></h3>
+      <h4 className="section_subtitle SubProject">Some Stuff I've Built</h4>
       <div className="container">
         <div className="row">
           {cards.map(({ title, text, image, url, id, color }) => (

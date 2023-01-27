@@ -3,7 +3,7 @@ import './Banner.css';
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
-import headerImg from "../../assets/img/header-img2.png";
+import headerImg from "../../assets/img/header-img.png";
 
 /* import waves from '../assets/img/layered-waves.svg'; */
 import { GiLightSabers } from 'react-icons/gi';

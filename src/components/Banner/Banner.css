@@ -127,6 +127,8 @@ p a {
     width: 80%;
     height: auto;
     animation: updown 3s ease-in-out infinite 1s;
+    border-bottom: transparent;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 80%);
 }
 
 @keyframes updown {
