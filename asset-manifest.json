@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-elmer/static/css/main.fb30d0ba.css",
-    "main.js": "/portfolio-elmer/static/js/main.94a6f1a2.js",
+    "main.css": "/portfolio-elmer/static/css/main.e00546ad.css",
+    "main.js": "/portfolio-elmer/static/js/main.62fbbb41.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio-elmer/static/js/787.1ed0c42c.chunk.js",
     "static/media/screen.png": "/portfolio-elmer/static/media/screen.b561415fd30758333c13.png",
     "static/media/lego.png": "/portfolio-elmer/static/media/lego.ec213d52d4192f56c82d.png",
@@ -23,12 +23,12 @@
     "static/media/cvDark.svg": "/portfolio-elmer/static/media/cvDark.127940dc531fd01a2160f3924a047975.svg",
     "static/media/moon.svg": "/portfolio-elmer/static/media/moon.76cc9ce56ede1e53e01d50616adcd88b.svg",
     "static/media/linkedinDark.svg": "/portfolio-elmer/static/media/linkedinDark.7c123b8e126eda4e71457aaea5c462c5.svg",
-    "main.fb30d0ba.css.map": "/portfolio-elmer/static/css/main.fb30d0ba.css.map",
-    "main.94a6f1a2.js.map": "/portfolio-elmer/static/js/main.94a6f1a2.js.map",
+    "main.e00546ad.css.map": "/portfolio-elmer/static/css/main.e00546ad.css.map",
+    "main.62fbbb41.js.map": "/portfolio-elmer/static/js/main.62fbbb41.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio-elmer/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb30d0ba.css",
-    "static/js/main.94a6f1a2.js"
+    "static/css/main.e00546ad.css",
+    "static/js/main.62fbbb41.js"
   ]
 }
