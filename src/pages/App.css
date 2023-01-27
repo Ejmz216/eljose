@@ -97,15 +97,19 @@ p.danger {
 }
 
 .section_title {
+    text-align: center;
+    padding-top: 30px;
     font-size: 40px;
     font-weight: 700;
     color: #08023B;
 }
 
-.section_subtitle{
+.section_subtitle {
+
     font-size: 20px;
     padding: 10px 0 10px 0;
     text-align: center !important;
+    padding-bottom: 30px !important;
 }
 
 /* -----------------SSOCIAL ICONS----------------------- */
@@ -153,4 +157,30 @@ p.danger {
 
 .social-icon a:hover img {
     filter: brightness(100) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+/*=============== BUTTONS ===============*/
+.button {
+    display: inline-block;
+    background-color: #833AB4;
+    color: white;
+    padding: 1.25rem 2rem;
+    border-radius: 1rem;
+    font-weight: 200px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #472183;
+    color: white;
+}
+
+.button_icon {
+    margin-left: 0.5rem;
+    
+}
+
+.button--flex {
+    display: inline-flex;
+    align-items: center;
 }

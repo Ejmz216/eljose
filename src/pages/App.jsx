@@ -6,10 +6,11 @@ import { Banner } from "../components/Banner/Banner.jsx";
 import { Skills } from "../components/Skills/Skills.jsx";
 import { Cards } from "../components/Projects/Cards.jsx";
 import { Education } from "../components/Education/Education.jsx"
+import { Contact } from "../components/Contact/Contact.jsx";
 
 import { Footer } from "../components/Footer/Footer.jsx";
 import { ScrollUp } from "../components/ScrollUp/ScrollUp.jsx";
-/* import { Contact } from "../components/Contact/Contact.jsx"; */
+
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <Skills />
       <Cards />
       <Education />
-
+      <Contact />
       <ScrollUp />
       <Footer />
     </div>
