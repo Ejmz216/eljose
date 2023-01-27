@@ -169,6 +169,7 @@ p a {
         width: 55%;
         height: auto;
     }
+
     .banner button {
         margin-bottom: 50px !important;
     }
@@ -176,17 +177,23 @@ p a {
 }
 
 @media (max-width: 987px) and (min-width: 769px) {
+    .banner {
+        margin-top: 0;
+        padding: 100px 0 100px 0;
+    }
 
     .col-md-6 {
         width: 100%;
         height: auto;
     }
+
     .col-xl-5 {
         position: relative;
         left: 100px;
         width: 70%;
         height: auto;
     }
+
     .banner button {
         margin-bottom: 50px !important;
     }
@@ -194,12 +201,17 @@ p a {
 }
 
 @media (max-width: 768px) {
+    .banner {
+        margin-top: 0;
+        padding: 100px 0 100px 0;
+    }
 
     .banner button {
         margin-bottom: 50px !important;
     }
 
 }
+
 @media (max-width: 500px) {
 
     .banner {
