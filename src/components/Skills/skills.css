@@ -5,13 +5,13 @@
 }
 
 .skill-bx {
-    background: white;
-    border-radius: 0px;
+    background: #F9F5EF;
+    border-radius: 5px;
     text-align: center;
     padding: 60px 50px;
     margin-top: -60px;
     border-bottom: transparent;
-    box-shadow: 0 3px 15px rgb(0 0 0 / 50%);
+    box-shadow: 0 3px 15px rgb(0 0 0 / 80%);
 }
 
 
@@ -29,9 +29,9 @@
     background-color: #38385F;
     border: 1px solid Orgba(0, 0, 0, 0.1);
     padding: 10px 32px 16px 32px;
-    border-radius: 2px;
+    border-radius: 5px;
     border-bottom: transparent;
-    box-shadow: 0 3px 15px rgb(0 0 0 / 30%);
+    box-shadow: 0 3px 15px rgb(0 0 0 / 50%);
 
 }
 
@@ -56,8 +56,6 @@
 .skill_data {
     column-gap: 1rem;
 }
-
-
 
 
 

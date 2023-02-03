@@ -3,13 +3,9 @@ import './Banner.css';
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
-import headerImg from "../../assets/img/header-img.png";
-
-/* import waves from '../assets/img/layered-waves.svg'; */
-import { GiLightSabers } from 'react-icons/gi';
+import headerImg from "../../assets/img/banner/header-img.png";
 
 function Banner() {
-
     const [loopNum, setLoopNum] = React.useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = ["Frontend Developer", "Web Designer", "Electronic & Telecom Engenieer"];
@@ -58,10 +54,10 @@ function Banner() {
                             I have developed projects with tools like React Js, Vanilla Js, NextJs, TailWind, Bootstrap, Sass and implementation of REST services.
                             I also have some practical experience in back-end development with NodeJs, PHP, and handling SQL and NoSQL databases (MySQL and MongoDB respectively).
                         </p>
-                        <button onClick={() => console.log('connect')}><span>Let’s Connect</span><BsFillArrowRightCircleFill /></button>
+                        <a href="#Contact" id='show_more'><span>Let’s Connect</span><BsFillArrowRightCircleFill /></a>
 
                     </Col>
-                    <Col xs={12} md={6} xl={5}>
+                    <Col xs={12} md={6} xl={5} id="image_padding">
                         <img src={headerImg} alt='Header img' />
                     </Col>
                 </Row>

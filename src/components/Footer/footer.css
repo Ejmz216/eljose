@@ -1,11 +1,7 @@
 /************ Footer Css ************/
 .footer {
 	padding: 15px 0 5px 0;
-	background: rgb(248, 248, 248);
-	background: linear-gradient(103deg,
-			rgba(248, 248, 248, 1) 0%,
-			rgba(241, 249, 253, 1) 51%,
-			rgba(240, 250, 252, 1) 100%);
+	background: var(--main-color);
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
 	border-bottom: transparent;
 	box-shadow: 0 3px 15px rgb(0 0 0 / 20%);
@@ -23,7 +19,7 @@
 
 
 .footer_link {
-	color: #08023B;
+	color: var(--navbar-for-light);
 	text-decoration: none;
 }
 

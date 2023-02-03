@@ -18,6 +18,15 @@
     font-weight: 400;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/*************************************/
+:root {
+    --main-color: linear-gradient(103deg, rgba(248, 248, 248, 1) 0%, rgba(241, 249, 253, 1) 51%, rgba(240, 250, 252, 1) 100%);
+    --dark-blue: #08023B;
+    --white-1: #ffffff;
+}
+
 /************ Default Css ************/
 * {
     margin: 0;
@@ -162,12 +171,15 @@ p.danger {
 /*=============== BUTTONS ===============*/
 .button {
     display: inline-block;
-    background-color: #833AB4;
+    /* background-color: #C42368; */
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(226, 17, 67, 1) 100%);
     color: white;
     padding: 1.25rem 2rem;
     border-radius: 1rem;
     font-weight: 200px;
     text-decoration: none;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
 }
 
 .button:hover {
@@ -177,7 +189,7 @@ p.danger {
 
 .button_icon {
     margin-left: 0.5rem;
-    
+
 }
 
 .button--flex {

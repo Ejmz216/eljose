@@ -6,14 +6,14 @@ import Frameworks from './Frameworks.jsx';
 import Markup from './MarkupDB.jsx';
 import Tools from './Tools.jsx';
 
-import { GiSkills } from 'react-icons/gi';
+import { HiChip } from 'react-icons/hi';
 
 function Skills() {
     return (
         <section className="skills section" id="skills">
             <div className='container'>
                 <div className='skill-bx'>
-                    <h2 className='section_title'><GiSkills /> Skills</h2>
+                    <h2 className='section_title'>Skills <HiChip /></h2>
                     <h4 className='section_subtitle'>My Tech Stack</h4>
                     <div className='skills_container container grid'>
                         <Languages />

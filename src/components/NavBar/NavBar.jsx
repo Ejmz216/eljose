@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, Container} from 'react-bootstrap';
+import { Nav, Navbar, Container } from 'react-bootstrap';
 import Linkedin from '../../assets/img/icons/linkedinDark.svg';
 import github from '../../assets/img/icons/githubDark.svg';
 import instagram from '../../assets/img/icons/instagramDark.svg';
@@ -30,10 +30,9 @@ function NavBar() {
         alert("Sorry! The Nightmode is Coming Soon!")
     }
     return (
-        <Navbar expand="lg" /* className={scrolled ? "scrolled" : ""} */>
+        <Navbar expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
-                    {/* <img src={logo} alt="logo" /> */}
                     <h3 className='main_logo'>EL-JOSE</h3>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -49,10 +48,10 @@ function NavBar() {
                     </Nav>
                     <span className='navbar-text'>
                         <div className='social-icon'>
-                            <a href='https://www.linkedin.com/in/elmer-jose-mu%C3%B1oz-zu%C3%B1iga-563022240/'><img alt='linkedin' src={Linkedin}></img></a>
-                            <a href='https://github.com/Ejmz216'><img alt='git' src={github}></img></a>
-                            <a href='https://www.instagram.com/eljose__mz/'><img alt='instagram' src={instagram}></img></a>
-                            <a href='https://drive.google.com/file/d/19dX0z1LboQlzlb_PKYJ42B3DBXcNOp6u/view?usp=sharing'><img alt='cv' src={cv}></img></a>
+                            <a href='https://www.linkedin.com/in/elmer-jose-mu%C3%B1oz-zu%C3%B1iga-563022240/' target="_blank" rel="noreferrer" ><img alt='linkedin' src={Linkedin}></img></a>
+                            <a href='https://github.com/Ejmz216' target="_blank" rel="noreferrer" ><img alt='git' src={github}></img></a>
+                            <a href='https://www.instagram.com/eljose__mz/' target="_blank" rel="noreferrer" ><img alt='instagram' src={instagram}></img></a>
+                            <a href='https://drive.google.com/file/d/19dX0z1LboQlzlb_PKYJ42B3DBXcNOp6u/view?usp=sharing' target="_blank" rel="noreferrer" ><img alt='cv' src={cv}></img></a>
                             <a href='#home' onClick={() => comingSoon()}><img alt='moon' src={moon}></img></a>
                         </div>
                     </span>

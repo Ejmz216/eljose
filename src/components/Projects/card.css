@@ -5,7 +5,8 @@
     background-position: top 80% center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    background-color: #F9F5EF;
 }
 
 .bg-dark {
@@ -17,7 +18,8 @@
     font-size: 40px;
     text-align: center;
 }
-.SubProject{
+
+.SubProject {
     color: white;
     padding-bottom: 4rem;
 }
@@ -35,8 +37,8 @@
 .card-body {
     padding: 2rem !important;
     min-height: 280px;
-    background-color: var(--idColor);
-    border-radius: 0px !important;
+    background-color: white;
+    border-radius: 0px 0px 5px 5px !important;
     text-align: left;
 }
 
@@ -52,19 +54,20 @@
 
 }
 
-.overflow {
+/* .overflow {
     overflow: hidden;
 }
-
+ */
 .card-img-top {
-    border-radius: 0em;
+    border-radius: 5px 5px 0px 0px;
     object-fit: scale-down;
     transform: scale(1);
     transition: all 0.2s ease-in-out;
 }
 
 .card-img-top:hover {
-    transform: scale(0.8);
+    transform: scale(1.05);
+    border-radius: 5px;
 }
 
 .col-md-4 {
@@ -91,7 +94,7 @@
 
 #id1,
 #id6 {
-    --idColor: #F4E6D7;
+    --idColor: #c15b87;
 }
 
 #id2,
@@ -105,11 +108,13 @@
 }
 
 
-@media (max-width: 990px) and (min-width: 769px) {
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
 
     .card-text {
         padding: 0.3rem 0rem;
-        font-size: 13px;
+        font-size: 10px;
         text-align: left;
     }
 

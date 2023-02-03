@@ -18,7 +18,7 @@ function Card({ imageSource, title, text, url, color }) {
           className="btn btn-outline-secondary border-0"
           rel="noreferrer"
         >
-          Go to {title}
+          {title} Repository
         </a>
       </div>
     </div>
