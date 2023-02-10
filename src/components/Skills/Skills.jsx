@@ -16,7 +16,7 @@ function Skills() {
             <div className='container'>
                 <div className='skill-bx'>
                     <h2 className='section_title'>Skills <HiChip /></h2>
-                    <h4 className='section_subtitle'>My Tech Stack</h4>
+                    <h4 className='section_subtitle'>My Tech Stack & Soft Skills</h4>
                     <div className='skills_container container grid'>
                         <Languages />
                         <Frameworks />
