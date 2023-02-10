@@ -132,3 +132,10 @@
         font-weight: 450;
     }
 }
+
+@media screen and (max-width: 390px) {
+    .card-text {
+        font-size: 15px;
+        text-align: center;
+    }
+}

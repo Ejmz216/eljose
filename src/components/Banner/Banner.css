@@ -166,6 +166,7 @@ p a {
         margin-bottom: 30px;
 
     }
+
     .banner p {
         padding: 10px 10px 20px 10px;
     }
@@ -260,4 +261,24 @@ p a {
         padding: 75px 0 100px 0;
     }
 
+}
+
+@media screen and (max-width: 390px) {
+    .banner h1 {
+        font-size: 30px;
+        padding-left: 13px;
+    }
+
+    .banner h2 {
+        font-size: 25px;
+        font-weight: 500;
+        padding-left: 13px;
+        margin-bottom: 0;
+    }
+
+    .banner .tagline {
+        font-weight: 500;
+        font-size: 18px;
+        margin-left: 13px;
+    }
 }
