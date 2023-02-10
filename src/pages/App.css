@@ -1,24 +1,6 @@
 /************ Custom Font ************/
-@font-face {
-    font-family: Centra;
-    src: url('../assets/font/CentraNo2-Bold.ttf');
-
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: Centra;
-    src: url('../assets/font/CentraNo2-Medium.ttf');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: Centra;
-    src: url('../assets/font/CentraNo2-Book.ttf');
-    font-weight: 400;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 /*************************************/
 :root {
@@ -45,7 +27,7 @@ body {
     position: relative;
     background-color: #121212;
     color: #85829F !important;
-    font-family: 'Centra', sans-serif !important;
+    font-family: 'Rubik', sans-serif !important;
 }
 
 h1,

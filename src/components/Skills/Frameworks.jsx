@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiJavascript, SiTailwindcss, SiBootstrap } from 'react-icons/si';
+import { SiTailwindcss, SiBootstrap } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 function Backend() {
 

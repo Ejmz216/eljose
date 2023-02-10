@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGitAlt, FaGithub, FaFigma, FaLinux, FaWindows } from 'react-icons/fa';
 import { SiVisualstudiocode, SiMicrosoftexcel } from 'react-icons/si';
-import { TbMathFunction } from 'react-icons/tb';
 
 function Tools() {
 

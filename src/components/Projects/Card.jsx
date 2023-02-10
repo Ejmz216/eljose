@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { IoIosArrowForward } from 'react-icons/io';
 
 import "./card.css";
 
@@ -13,12 +14,13 @@ function Card({ imageSource, title, text, url, color }) {
         <h4 className="card-title">{title}</h4>
         <p className="card-text text-secondary">{text}</p>
         <a
+          id="button_card"
           href={url ? url : "#!"}
           target="_blank"
           className="btn btn-outline-secondary border-0"
           rel="noreferrer"
         >
-          {title} Repository
+          {title} Repository <IoIosArrowForward />
         </a>
       </div>
     </div>

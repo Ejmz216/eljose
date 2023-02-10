@@ -1,7 +1,9 @@
 import React from 'react';
-import { FaJava } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiPython, SiCplusplus } from 'react-icons/si';
-import { TbMathFunction } from 'react-icons/tb';
+import { RiMentalHealthLine } from 'react-icons/ri';
+import { IoThumbsUpSharp, IoEar} from 'react-icons/io5';
+import { BsCardChecklist } from 'react-icons/bs';
+import { VscWorkspaceTrusted } from 'react-icons/vsc';
+import { FaPaintBrush, FaExchangeAlt } from 'react-icons/fa';
 
 function Languages() {
     /*  Color code: 
@@ -15,39 +17,44 @@ function Languages() {
     */
     const technologies = [
         {
-            name: "JavaScript",
-            icon: <SiJavascript />,
+            name: "Confidence",
+            icon: <IoThumbsUpSharp />,
             color: "color6",
         },
         {
-            name: "TypeScript",
-            icon: <SiTypescript />,
+            name: "Empathetic Listening",
+            icon: <IoEar />,
+            color: "color2",
+        },
+        {
+            name: "Delegation",
+            icon: <BsCardChecklist />,
             color: "color1",
         },
         {
-            name: "Java",
-            icon: <FaJava />,
-            color: "color3",
+            name: "Reliability",
+            icon: <VscWorkspaceTrusted />,
+            color: "color2",
         },
         {
-            name: "Python",
-            icon: <SiPython />,
+            name: "Adaptability",
+            icon: <FaExchangeAlt />,
             color: "color6",
         },
         {
-            name: "C++",
-            icon: <SiCplusplus />,
-            color:"color1",
+            name: "Creativity",
+            icon: <FaPaintBrush />,
+            color: "color5",
         },
         {
-            name: "Matlab",
-            icon: <TbMathFunction />,
+            name: "Motivated",
+            icon: <RiMentalHealthLine />,
             color: "color7",
         },
     ];
     return (
         <div className="skill_content">
-            <h2 className="skills_title"> Programming Languages</h2>
+            <h2 className="skills_title"> Soft Skills</h2>
             <div className="skill_inner_box">
                 {/* ------------------ Data ------------------ */}
                 {technologies.map(({ name, icon, color }) => (

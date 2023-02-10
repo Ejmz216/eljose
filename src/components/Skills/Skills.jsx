@@ -5,6 +5,8 @@ import Languages from './Languages.jsx';
 import Frameworks from './Frameworks.jsx';
 import Markup from './MarkupDB.jsx';
 import Tools from './Tools.jsx';
+import Speaking from './Speaking.jsx';
+import SoftSkills from './SoftSkills.jsx';
 
 import { HiChip } from 'react-icons/hi';
 
@@ -20,6 +22,8 @@ function Skills() {
                         <Frameworks />
                         <Markup />
                         <Tools />
+                        <Speaking />
+                        <SoftSkills />
                     </div>
                 </div>
             </div>

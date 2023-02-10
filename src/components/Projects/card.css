@@ -6,7 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 4rem;
-    background-color: #F9F5EF;
+    background-color: #F6F6F8;
 }
 
 .bg-dark {
@@ -26,12 +26,18 @@
 
 .card {
     border-color: none !important;
-    box-shadow: 0 5px 20px rgb(0 0 0 / 20%);
+    box-shadow: 0 2px 0 rgb(54 45 89 / 15%);
+    border: none !important;
 }
 
 .card:hover {
-    box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
-    transition: all 0.7s linear;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    box-shadow: 0 2px 0 rgb(54 45 89 / 15%),
+        -0.1875rem -0.1875rem 0 0.1875rem #f2b712,
+        0 0 0 0.375rem #e1567c !important;
+    /*  box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important; */
+    transition: all 0.3s linear;
 }
 
 .card-body {
@@ -39,7 +45,6 @@
     min-height: 280px;
     background-color: white;
     border-radius: 0px 0px 5px 5px !important;
-    text-align: left;
 }
 
 .card-text,
@@ -65,31 +70,35 @@
     transition: all 0.2s ease-in-out;
 }
 
-.card-img-top:hover {
+/* .card-img-top:hover {
     transform: scale(1.05);
     border-radius: 5px;
 }
-
+ */
 .col-md-4 {
     padding: 10px;
     border-radius: 0px;
 }
 
 .card a {
-    background-image: linear-gradient(60deg, #833ab4, #E21143);
-    background-clip: text;
-    color: transparent;
+    /* background-image: linear-gradient(60deg, #833ab4, #E21143);
+    background-clip: text; */
+    color: #E1567C;
     font-weight: 500;
     bottom: 25px;
-    left: 10px;
+    left: 20px;
     position: absolute;
+    border-radius: 2rem;
+    background: #F6F6F8 !important;
+    transition: box-shadow .3s;
+    will-change: box-shadow;
 
 }
 
 .card a:hover {
-    background-image: linear-gradient(60deg, #08a7ad, #3272dd);
-    background-clip: text;
-    color: transparent;
+    /* background-image: linear-gradient(60deg, #08a7ad, #3272dd);
+    background-clip: text; */
+    color: black;
 }
 
 #id1,
