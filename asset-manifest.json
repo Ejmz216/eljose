@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/eljose/static/css/main.741ecfe5.css",
+    "main.css": "/eljose/static/css/main.51385932.css",
     "main.js": "/eljose/static/js/main.be8ce0d8.js",
     "static/js/787.1ed0c42c.chunk.js": "/eljose/static/js/787.1ed0c42c.chunk.js",
     "static/media/Lego.png": "/eljose/static/media/Lego.2bca31cce2d1581c7632.png",
@@ -20,12 +20,12 @@
     "static/media/moon.svg": "/eljose/static/media/moon.76cc9ce56ede1e53e01d50616adcd88b.svg",
     "index.html": "/eljose/index.html",
     "static/media/linkedinDark.svg": "/eljose/static/media/linkedinDark.7c123b8e126eda4e71457aaea5c462c5.svg",
-    "main.741ecfe5.css.map": "/eljose/static/css/main.741ecfe5.css.map",
+    "main.51385932.css.map": "/eljose/static/css/main.51385932.css.map",
     "main.be8ce0d8.js.map": "/eljose/static/js/main.be8ce0d8.js.map",
     "787.1ed0c42c.chunk.js.map": "/eljose/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.741ecfe5.css",
+    "static/css/main.51385932.css",
     "static/js/main.be8ce0d8.js"
   ]
 }
