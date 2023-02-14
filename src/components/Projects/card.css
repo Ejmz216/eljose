@@ -119,12 +119,35 @@
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
+@media (max-width: 1200px) and (min-width: 993px) {
+
+    .card a {
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .card-text {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 20px;
+
+    }
+
+}
+
 @media screen and (max-width: 992px) {
+    .card a {
+        font-size: 10px;
+        font-weight: 500;
+    }
 
     .card-text {
         padding: 0.3rem 0rem;
         font-size: 10px;
-        text-align: left;
+        text-align: center;
     }
 
     .card-title {
@@ -132,7 +155,12 @@
         font-weight: 450;
     }
 }
-
+@media screen and (max-width: 770px) {
+    .card a {
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
 @media screen and (max-width: 390px) {
     .card-text {
         font-size: 15px;
