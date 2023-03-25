@@ -155,7 +155,7 @@
         font-weight: 450;
     }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 768px) {
     .card a {
         font-size: 15px;
         font-weight: 500;
