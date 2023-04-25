@@ -8,7 +8,7 @@ import headerImg from "../../assets/img/banner/header-img.png";
 function Banner() {
     const [loopNum, setLoopNum] = React.useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Frontend Developer", "Web Designer", "Electronic & Telecom Engenieer"];
+    const toRotate = ["Software Developer", "", "Electronic & Telecom Engenieer"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 800;
@@ -51,8 +51,8 @@ function Banner() {
                         <br></br>
                         <p>  Student of Electronic Engineering and Telecommunications, with an emphasis in Telematics at the University of Cauca and Frontend Developer.
                             Passionate about software development, user interface design and continuous learning. Teamwork and fun are my work principles.
-                            I have developed projects with tools like React Js, Vanilla Js, NextJs, TailWind, Bootstrap, Sass and implementation of REST services.
-                            I also have some practical experience in back-end development with NodeJs, PHP, and handling SQL and NoSQL databases (MySQL and MongoDB respectively).
+                            I have developed projects with tools like React Js, Vanilla Js, Angular, TailWind, Bootstrap and implementation of REST services.
+                            I also have some practical experience in back-end development with  SpringBoot, NodeJs, PHP, and handling SQL and NoSQL databases (MySQL and MongoDB respectively).
                         </p>
                         <a href="#Contact" id='show_more'><span>Let’s Connect</span><BsFillArrowRightCircleFill /></a>
 

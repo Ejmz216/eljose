@@ -51,7 +51,7 @@ function NavBar() {
                             <a href='https://www.linkedin.com/in/elmer-jose-mu%C3%B1oz-zu%C3%B1iga-563022240/' target="_blank" rel="noreferrer" ><img alt='linkedin' src={Linkedin}></img></a>
                             <a href='https://github.com/Ejmz216' target="_blank" rel="noreferrer" ><img alt='git' src={github}></img></a>
                             <a href='https://www.instagram.com/eljose__mz/' target="_blank" rel="noreferrer" ><img alt='instagram' src={instagram}></img></a>
-                            <a href='https://drive.google.com/file/d/19-aAYQiBTzql2Lw-eP4KVGDw5ERjm-as/view?usp=sharing' target="_blank" rel="noreferrer" ><img alt='cv' src={cv}></img></a>
+                            <a href='https://drive.google.com/file/d/1mF-xrlqEzjhG7AL2X_YEha7KyxAhoxPg/view?usp=sharing' target="_blank" rel="noreferrer" ><img alt='cv' src={cv}></img></a>
                             <a href='#home' onClick={() => comingSoon()}><img alt='moon' src={moon}></img></a>
                         </div>
                     </span>

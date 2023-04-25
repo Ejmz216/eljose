@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiTailwindcss, SiBootstrap } from 'react-icons/si';
-import { TbBrandNextjs } from 'react-icons/tb';
+import { SiTailwindcss, SiAngular, SiSpringboot, SiBootstrap } from 'react-icons/si';
+
 function Backend() {
 
     const technologies = [
@@ -11,9 +11,14 @@ function Backend() {
             color: "color1",
         },
         {
-            name: "Next JS",
-            icon: <TbBrandNextjs />,
-            color: "color4",
+            name: "Angular JS",
+            icon: <SiAngular />,
+            color: "color7",
+        },
+        {
+            name: "SpringBoot",
+            icon: <SiSpringboot />,
+            color: "color2",
         },
         {
             name: "Node JS",

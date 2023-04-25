@@ -4,7 +4,9 @@ import Card from "./Card";
 import './card.css';
 import { BsCodeSlash } from 'react-icons/bs';
 
+import pruebatec from "../../assets/img/projects/pruebatec.png";
 import screen from "../../assets/img/projects/screen.png";
+import screen2 from "../../assets/img/projects/screen2.png";
 import petlify from "../../assets/img/projects/Petlify.png";
 /* import catsapp from "../../assets/img/projects/catsapp.png"; */
 import todo from "../../assets/img/projects/todo.png";
@@ -23,6 +25,14 @@ const cards = [
   },
   {
     id: 2,
+    color: "id1",
+    title: "The Screen V2.0",
+    image: screen2,
+    text: "New version of The Screen. This time, I have opted to completely update (remake) the application using ReactJS and the well-known organization and best practices method Atomic Design",
+    url: "https://github.com/Ejmz216/react_the_screen2",
+  },
+  {
+    id: 3,
     color: "id2",
     title: "Petlify",
     image: petlify,
@@ -30,7 +40,7 @@ const cards = [
     url: "https://www.figma.com/file/8hu45hDFF3LKeUE0krMje9/HCI---App?node-id=0%3A1&t=KEepdQf8Q8DA8ZkG-1",
   },
   {
-    id: 3,
+    id: 4,
     color: "id3",
     title: "ToDo App React",
     image: todo,
@@ -38,15 +48,23 @@ const cards = [
     url: "https://github.com/Ejmz216/todo-app-react",
   },
   {
-    id: 4,
+    id: 5,
     color: "id4",
     title: "Elmer's Portfolio ",
     image: portfolio,
-    text:"Single page application with React.js, for sharing my projects and blog (soon!)",
+    text: "Single page application with React.js, for sharing my projects and blog (soon!)",
     url: "https://github.com/Ejmz216/portfolio-elmer",
   },
   {
-    id: 5,
+    id: 6,
+    color: "id4",
+    title: "Angular - SpringBoot Practice",
+    image: pruebatec,
+    text: "This test is intended to assess programming knowledge using the Angular and Springboot frameworks.",
+    url: "https://github.com/Ejmz216/prueba-tecnica-fullstack",
+  },
+  {
+    id: 7,
     color: "id5",
     title: "PtP DTS Analysis",
     image: ptp,
@@ -54,7 +72,7 @@ const cards = [
     url: "https://github.com/Ejmz216/Proyecto-Laboratorio-2-de-Sistemas-de-Telecomunicaciones",
   },
   {
-    id: 6,
+    id: 8,
     color: "id6",
     title: "Lego CSS Animations",
     image: lego,

@@ -33,54 +33,60 @@ function Education() {
     const courses = [
         {
             id: 1,
+            title: "Google Cloud Foundations",
+            subtitle: "Google Cloud Computing Foundations ACADEMY",
+            see: "https://drive.google.com/file/d/1HNgFsgYPPBfYIlFXEZJDyfC_KJ2njzum/view?usp=sharing"
+        },
+        {
+            id: 2,
             title: "Frontend con React.js",
             subtitle: "Platzi",
             see: "https://drive.google.com/drive/folders/1mZrIoZaVsEERyr_j1dtE3u5y79HVdCoo?usp=sharing"
         },
         {
-            id: 2,
+            id: 3,
             title: "TypeScript: Fundamentos, OOP, Tipos Avanzados y Funciones",
             subtitle: "Platzi",
             see: "https://drive.google.com/drive/folders/1iF5ZzLkDe98Q4RtIwcb9LO8qJ6KaPU4m?usp=sharing",
         },
         {
-            id: 3,
+            id: 4,
             title: "Profesional de JavaScript",
             subtitle: "Platzi",
             see: "https://drive.google.com/file/d/1DiJFt2lXH3Wa2rwN4mJEe3r5oHw4v_xF/view?usp=sharing",
         },
         {
-            id: 4,
+            id: 5,
             title: "JavaScript: Consumo Profesional API REST, Closures y Scopes, OOP, Prácticas, Animaciones",
             subtitle: "Platzi",
             see: "https://drive.google.com/drive/folders/1GBWp21e3jLTEWOVZFMqCmkaig_oeGJAJ?usp=sharing",
         },
         {
-            id: 5,
+            id: 6,
             title: "NPM: Gestión de Paquetes y Dependencias JavaScript",
             subtitle: "Platzi",
             see: "https://drive.google.com/file/d/1eJB5B3pCYfAIko47JFo1Pah4mHnmpnkG/view?usp=sharing",
         },
         {
-            id: 6,
+            id: 7,
             title: "Python Fundamentals & Python for Data Science",
             subtitle: "Platzi e IBM",
             see: "https://drive.google.com/drive/folders/14brGqdkAjdrpBeino3uZ-JiWKq8xFAt8?usp=sharing",
         },
         {
-            id: 7,
+            id: 8,
             title: "16.00x: Introduction to Aerospace Engineering: Astronautics and Human Spaceflight",
             subtitle: "MIT",
             see: "https://drive.google.com/file/d/1xAnzIhmx3_dDQ5GYJ01rmi_3H2mDWy8P/view?usp=sharing",
         },
         {
-            id: 8,
+            id: 9,
             title: "Scrum Fundamentals",
             subtitle: "SCRUMstudy",
             see: "https://drive.google.com/file/d/1j1_xP_zCo_HbGOI3O8l3q4IZv1xfTp8C/view?usp=sharing",
         },
         {
-            id: 9,
+            id: 10,
             title: "Matlab Fundamentals",
             subtitle: "MathWorks",
             see: "https://drive.google.com/file/d/1-HzOW4Xsib8hrC9w_lF6uU9qRHPiNz_2/view?usp=sharing",

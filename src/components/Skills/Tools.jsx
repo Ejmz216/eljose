@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGitAlt, FaGithub, FaFigma, FaLinux, FaWindows } from 'react-icons/fa';
-import { SiVisualstudiocode, SiMicrosoftexcel } from 'react-icons/si';
+import { SiAmazonaws, SiGooglecloud, SiVisualstudiocode, SiMicrosoftexcel } from 'react-icons/si';
 
 function Tools() {
 
@@ -20,6 +20,18 @@ function Tools() {
             icon: <SiVisualstudiocode />,
             color: "color1",
         },
+
+        {
+            name: "Google Clod Platform",
+            icon: <SiGooglecloud />,
+            color: "color6",
+        },
+        {
+            name: "AWS",
+            icon: <SiAmazonaws />,
+            color: "color3",
+        },
+
         {
             name: "Excel",
             icon: <SiMicrosoftexcel />,
