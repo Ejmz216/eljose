@@ -7,12 +7,12 @@ import { BsCodeSlash } from 'react-icons/bs';
 import pruebatec from "../../assets/img/projects/pruebatec.png";
 import screen from "../../assets/img/projects/screen.png";
 import screen2 from "../../assets/img/projects/screen2.png";
-import petlify from "../../assets/img/projects/Petlify.png";
+import petlify from "../../assets/img/projects/petlify.png";
 /* import catsapp from "../../assets/img/projects/catsapp.png"; */
 import todo from "../../assets/img/projects/todo.png";
-import ptp from "../../assets/img/projects/Ptp.png";
+import ptp from "../../assets/img/projects/ptp.png";
 import portfolio from "../../assets/img/projects/Porfolio.png";
-import lego from "../../assets/img/projects/Lego.png";
+import lego from "../../assets/img/projects/lego.png";
 
 const cards = [
   {
