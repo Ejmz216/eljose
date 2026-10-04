@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="motion">
+  <defs>
+    <radialGradient id="o-motion" cx=".32" cy=".26" r=".8"><stop offset="0" stop-color="#b9e29a"/><stop offset="1" stop-color="#4f9a46"/></radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="url(#o-motion)"/>
+  <ellipse cx="25" cy="14" rx="9" ry="4" fill="#fff" opacity=".28"/>
+  <g transform="translate(18 18) scale(1.1667)" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12h-2c-.894 0 -1.662 -.857 -1.761 -2c-.296 -3.45 -.749 -6 -2.749 -6s-2.5 3.582 -2.5 8s-.5 8 -2.5 8s-2.452 -2.547 -2.749 -6c-.1 -1.147 -.867 -2 -1.763 -2h-2"/></g>
+</svg>

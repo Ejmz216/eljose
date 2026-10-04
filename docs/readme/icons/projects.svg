@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="projects">
+  <defs>
+    <radialGradient id="o-projects" cx=".32" cy=".26" r=".8"><stop offset="0" stop-color="#9bb7ff"/><stop offset="1" stop-color="#2f5bea"/></radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="url(#o-projects)"/>
+  <ellipse cx="25" cy="14" rx="9" ry="4" fill="#fff" opacity=".28"/>
+  <g transform="translate(18 18) scale(1.1667)" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></g>
+</svg>
