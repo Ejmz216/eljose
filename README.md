@@ -10,6 +10,7 @@
 ![Payments](https://img.shields.io/badge/payments-ISO_20022-2f5bea?style=flat-square&labelColor=142036)
 ![Data](https://img.shields.io/badge/data-Python_·_SQL-1e88e5?style=flat-square&labelColor=142036)
 ![English](https://img.shields.io/badge/IELTS-7.5_(C1)-e3a800?style=flat-square&labelColor=142036)
+![Languages](https://img.shields.io/badge/site-EN_·_ES_·_IT-4b9443?style=flat-square&labelColor=142036)
 
 [About](#-about) · [Experience](#-experience) · [A look inside](#-a-look-inside) · [Side projects](#-side-projects) · [Design](#-design-notes) · [Español](#-en-español) · [How it was made](#-how-this-was-made)
 
@@ -21,7 +22,7 @@
 
 I'm an **Electronic and Telecommunications Engineer** and **IT Business Analyst** with 3+ years where business processes, data, software and user-centered design meet. Today I work at **Scotiabank (ScotiaTech)** on payment systems, financial messaging and ISO 20022.
 
-This repository is my CV, built as a small website instead of a PDF.
+This repository is my CV, built as a small website instead of a PDF. It reads in **English, Spanish and Italian** (English by default).
 
 <table>
 <tr>
@@ -101,7 +102,7 @@ Color with restraint: a warm, almost plain background, white cards in a bento gr
 <table>
 <tr>
 <td width="25%" align="center"><img src="docs/readme/icons/palette.svg" width="36" alt=""><br><b>Type</b><br><sub>Fraunces for headings, Inter for reading.</sub></td>
-<td width="25%" align="center"><img src="docs/readme/icons/moon.svg" width="36" alt=""><br><b>Light & dark</b><br><sub>Follows the system, remembers your choice.</sub></td>
+<td width="25%" align="center"><img src="docs/readme/icons/moon.svg" width="36" alt=""><br><b>Light & dark · EN ES IT</b><br><sub>Theme and language are remembered.</sub></td>
 <td width="25%" align="center"><img src="docs/readme/icons/motion.svg" width="36" alt=""><br><b>Calm motion</b><br><sub>Cards fade in once; off with <code>prefers-reduced-motion</code>.</sub></td>
 <td width="25%" align="center"><img src="docs/readme/icons/device.svg" width="36" alt=""><br><b>Any screen</b><br><sub>The grid folds into one column on phones.</sub></td>
 </tr>
@@ -117,7 +118,7 @@ npm run build      # production build
 npm run deploy     # publish to GitHub Pages
 ```
 
-The whole site lives in two files: [`src/pages/App.jsx`](src/pages/App.jsx) holds the content as plain data arrays (a new job or project is one more item in a list), and [`src/pages/App.css`](src/pages/App.css) holds the tokens, tones and layout.
+The site lives in three files: [`src/pages/App.jsx`](src/pages/App.jsx) holds the structure (icons, colors, links), [`src/i18n.js`](src/i18n.js) holds every text in English, Spanish and Italian, and [`src/pages/App.css`](src/pages/App.css) holds the tokens, tones and layout.
 
 </details>
 
@@ -135,6 +136,7 @@ Este repositorio es mi hoja de vida en forma de sitio web. Soy **Ingeniero en El
 - **Experiencia:** IT Business Analyst y Project Manager en **BPO Labs**, con analítica, automatización de QA y Python + SQL.
 - **Formación:** Universidad del Cauca, con investigación en Interacción Humano-Computador y dos publicaciones.
 - **Proyectos:** en el menú *Projects* del sitio, empezando por Aula Libre de Pagos.
+- **Idiomas:** el sitio se puede leer en inglés, español e italiano.
 
 👉 [Ver la hoja de vida en vivo](https://ejmz216.github.io/eljose/)
 
@@ -144,7 +146,7 @@ Este repositorio es mi hoja de vida en forma de sitio web. Soy **Ingeniero en El
 
 I designed and built the first versions of this site myself: the structure, the content and the React code.
 
-Later I used AI (**Claude**, by Anthropic) as a creative partner for this redesign: the bento layout, the color system, the icon orbs, the projects menu, adding my Scotiabank experience, cleaning up old code, and this README. All the content describes my real experience, and I reviewed every change before publishing it.
+Later I used AI (**Claude**, by Anthropic) as a creative partner for this redesign: the bento layout, the color system, the icon orbs, the projects menu, the Spanish and Italian translations, adding my Scotiabank experience, cleaning up old code, and this README. All the content describes my real experience, and I reviewed every change before publishing it.
 
 <sub>Icons: <a href="https://tabler.io/icons">Tabler Icons</a> (MIT) via <a href="https://react-icons.github.io/react-icons/">react-icons</a> · Fonts: <a href="https://fonts.google.com/specimen/Fraunces">Fraunces</a> and <a href="https://fonts.google.com/specimen/Inter">Inter</a> (SIL Open Font License) · University emblem: <a href="https://commons.wikimedia.org/wiki/File:Logo_de_la_Universidad_del_Cauca.svg">Universidad del Cauca, via Wikimedia Commons</a> (CC BY-SA 4.0), cropped.</sub>
 

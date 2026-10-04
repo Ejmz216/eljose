@@ -1,5 +1,6 @@
 import "./App.css";
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
+import { DEFAULT_LANGUAGE, LANGUAGES, translations } from "../i18n";
 import profilePhoto from "../assets/img/profile.jpg";
 import unicaucaEmblem from "../assets/img/unicauca-emblem.png";
 import lcoyOne from "../assets/img/volunteering/lcoy-1.jpg";
@@ -51,331 +52,159 @@ import {
 } from "react-icons/tb";
 
 /* ------------------------------------------------------------------ */
-/* Content                                                             */
+/* Structure: icons, colors and links. Text lives in ../i18n.js       */
 /* ------------------------------------------------------------------ */
 
 const EMAIL = "elmerjmz128@gmail.com";
 
 const navItems = [
-  { href: "#experience", label: "Experience", icon: TbBriefcase, tone: "coral" },
-  { href: "#skills", label: "Skills", icon: TbTools, tone: "azure" },
-  { href: "#publications", label: "Publications", icon: TbBook2, tone: "orchid" },
-  { href: "#volunteering", label: "Volunteering", icon: TbLeaf, tone: "sage" },
+  { id: "experience", href: "#experience", icon: TbBriefcase, tone: "coral" },
+  { id: "skills", href: "#skills", icon: TbTools, tone: "azure" },
+  { id: "publications", href: "#publications", icon: TbBook2, tone: "orchid" },
+  { id: "volunteering", href: "#volunteering", icon: TbLeaf, tone: "sage" },
 ];
 
 const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/el-jose/", icon: TbBrandLinkedin },
-  { label: "GitHub", href: "https://github.com/Ejmz216", icon: TbBrandGithub },
-  { label: "Email", href: `mailto:${EMAIL}`, icon: TbMail },
+  { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/el-jose/", icon: TbBrandLinkedin },
+  { id: "github", label: "GitHub", href: "https://github.com/Ejmz216", icon: TbBrandGithub },
+  { id: "email", href: `mailto:${EMAIL}`, icon: TbMail },
 ];
 
 // Short version shown in the hero; the full detail lives in #experience.
 const timeline = [
   {
+    id: "scotiabank",
     company: "Scotiabank",
     team: "ScotiaTech",
     role: "Business Solutions Associate · IT Business Analyst",
-    period: "June 2026 - Present",
-    summary: "Requirements and impact analysis for banking technology: payment systems, financial messaging and ISO 20022.",
     icon: TbBuildingBank,
     tone: "coral",
     current: true,
   },
   {
+    id: "bpo",
     company: "BPO Labs S.A.S",
     role: "IT Business Analyst · Project Manager",
-    period: "May 2023 - Present",
-    summary: "Data requirements, QA automation and analytics features for a SaaS platform serving BPO operations.",
     icon: TbChartDots,
     tone: "violet",
   },
-  {
-    company: "IDIS Research Group",
-    role: "Undergraduate Researcher · HCI",
-    period: "2022 - 2023",
-    summary: "User experience research on web chatbots, presented at JIHCI 2023 in Buenos Aires.",
-    icon: TbMicroscope,
-    tone: "blue",
-  },
+  { id: "idis", icon: TbMicroscope, tone: "blue" },
 ];
 
-// Listed in the header "Projects" menu. Add new ones here; set inProgress for work not yet public.
+// Listed in the header "Projects" menu. Add new ones here and their text in i18n.js;
+// set inProgress for work that is not public yet.
 const projects = [
   {
+    id: "paymentLab",
     title: "Aula Libre de Pagos",
-    description: "ISO 20022 & payments learning space",
     href: "https://ejmz216.github.io/payment-lab/",
     code: "https://github.com/Ejmz216/payment-lab",
     icon: TbArrowsRightLeft,
     tone: "blue",
   },
-  {
-    title: "Next project",
-    description: "Coming soon",
-    icon: TbRocket,
-    tone: "amber",
-    inProgress: true,
-  },
+  { id: "next", icon: TbRocket, tone: "amber", inProgress: true },
 ];
 
 const experience = [
   {
+    id: "scotiabank",
     company: "Scotiabank",
     team: "ScotiaTech",
     role: "Business Solutions Associate · IT Business Analyst",
-    period: "June 2026 - Present",
     icon: TbBuildingBank,
     tone: "coral",
     current: true,
-    highlights: [
-      {
-        icon: TbChecklist,
-        content: (
-          <>
-            Analyze <strong>business, functional and system requirements</strong> for
-            technology initiatives, translating operational and financial-process needs
-            into structured specifications for technical teams.
-          </>
-        ),
-      },
-      {
-        icon: TbUsers,
-        content: (
-          <>
-            Work with <strong>business, technology and operations</strong> stakeholders
-            to define requirements, validate proposed solutions, and assess dependencies
-            and impacts across interconnected processes and systems.
-          </>
-        ),
-      },
-      {
-        icon: TbArrowsRightLeft,
-        content: (
-          <>
-            Support initiatives involving <strong>payment systems</strong> and
-            <strong> financial messaging</strong>: transaction flows, business rules,
-            message structures and integration requirements, including
-            <strong> ISO 20022</strong>.
-          </>
-        ),
-      },
-      {
-        icon: TbSearch,
-        content: (
-          <>
-            Analyze <strong>end-to-end processes</strong> to find functional gaps,
-            inconsistencies, dependencies and improvement opportunities before a
-            solution is implemented.
-          </>
-        ),
-      },
-      {
-        icon: TbShieldCheck,
-        content: (
-          <>
-            Help define and validate <strong>business-critical</strong> solutions where
-            data accuracy, traceability, interoperability and operational continuity
-            matter most.
-          </>
-        ),
-      },
-    ],
-    tags: ["ISO 20022", "Payment systems", "Financial messaging", "Requirements", "Impact analysis"],
+    highlightIcons: [TbChecklist, TbUsers, TbArrowsRightLeft, TbSearch, TbShieldCheck],
   },
   {
+    id: "bpo",
     company: "BPO Labs S.A.S",
     role: "IT Business Analyst · Project Manager",
-    period: "May 2023 - Present",
-    location: "Remote, Colombia",
     icon: TbChartDots,
     tone: "violet",
-    highlights: [
-      {
-        icon: TbTable,
-        content: (
-          <>
-            Collaborated with development teams to define <strong>data requirements</strong>,
-            <strong> schemas</strong>, <strong>validation rules</strong>, and analytical
-            reporting needs for operational products.
-          </>
-        ),
-      },
-      {
-        icon: TbMessages,
-        content: (
-          <>
-            Served as a <strong>technical bridge</strong> between software teams and
-            business stakeholders, translating operational needs into user stories,
-            acceptance criteria, backlog items, and measurable process improvements.
-          </>
-        ),
-      },
-      {
-        icon: TbBolt,
-        content: (
-          <>
-            Designed and maintained <strong>Python</strong> and <strong>SQL</strong> data
-            pipelines for report automation and validation workflows, reducing manual
-            work from more than four hours to less than thirty minutes.
-          </>
-        ),
-      },
-      {
-        icon: TbFileCheck,
-        content: (
-          <>
-            Cleaned, validated, and transformed structured operational datasets used
-            for <strong>QA metrics</strong>, performance analysis, and monitoring routines.
-          </>
-        ),
-      },
-      {
-        icon: TbDatabase,
-        content: (
-          <>
-            Performed <strong>SQL validations</strong> and consistency checks across
-            relational databases to support incident resolution, analytical reviews,
-            and system verification.
-          </>
-        ),
-      },
-      {
-        icon: TbTimeline,
-        content: (
-          <>
-            Supported <strong>Agile delivery</strong> through Scrum and Kanban practices
-            for technical backlogs related to data flows, analytical features, QA
-            automation, and system improvements.
-          </>
-        ),
-      },
-    ],
-    tags: ["Python", "SQL", "QA automation", "Analytics", "Scrum / Kanban"],
+    highlightIcons: [TbTable, TbMessages, TbBolt, TbFileCheck, TbDatabase, TbTimeline],
   },
 ];
 
 const skillGroups = [
-  {
-    title: "Business & Product",
-    icon: TbBulb,
-    tone: "amber",
-    items: [
-      "Business Analysis",
-      "Requirements Engineering",
-      "Functional Analysis",
-      "Functional Documentation",
-      "Product Requirements",
-      "Stakeholder Management",
-      "UAT & Functional Validation",
-    ],
-  },
-  {
-    title: "Banking & Financial Systems",
-    icon: TbBuildingBank,
-    tone: "coral",
-    items: [
-      "Payment Systems",
-      "Transaction Flows",
-      "Financial Messaging",
-      "ISO 20022",
-      "Business Rules Analysis",
-      "System & Process Impact Analysis",
-    ],
-  },
-  {
-    title: "Process & Delivery",
-    icon: TbRoute,
-    tone: "sage",
-    items: ["Process Improvement", "Process Mapping", "Agile Delivery", "Scrum", "Kanban", "SDLC", "Lean Six Sigma"],
-  },
-  {
-    title: "Data & Technology",
-    icon: TbDatabase,
-    tone: "azure",
-    items: ["Python", "SQL / MySQL", "Data Analysis", "Data Validation", "ETL & Data Pipelines", "API Testing"],
-  },
-  {
-    title: "Tools",
-    icon: TbTools,
-    tone: "blue",
-    items: ["Jira", "ClickUp", "Postman", "Git / GitHub", "Figma", "Microsoft Office"],
-  },
+  { id: "business", icon: TbBulb, tone: "amber" },
+  { id: "banking", icon: TbBuildingBank, tone: "coral" },
+  { id: "process", icon: TbRoute, tone: "sage" },
+  { id: "data", icon: TbDatabase, tone: "azure" },
+  { id: "tools", icon: TbTools, tone: "blue" },
 ];
 
 const principles = [
-  { area: "Business", value: "Clarity", icon: TbBulb, tone: "amber" },
-  { area: "Data", value: "Evidence", icon: TbDatabase, tone: "azure" },
-  { area: "Payments", value: "Traceability", icon: TbArrowsRightLeft, tone: "coral" },
-  { area: "Process", value: "Flow", icon: TbRoute, tone: "sage" },
-  { area: "People", value: "Empathy", icon: TbHeartHandshake, tone: "orchid" },
-  { area: "Software", value: "Craft", icon: TbCode, tone: "blue" },
+  { id: "business", icon: TbBulb, tone: "amber" },
+  { id: "data", icon: TbDatabase, tone: "azure" },
+  { id: "payments", icon: TbArrowsRightLeft, tone: "coral" },
+  { id: "process", icon: TbRoute, tone: "sage" },
+  { id: "people", icon: TbHeartHandshake, tone: "orchid" },
+  { id: "software", icon: TbCode, tone: "blue" },
 ];
 
 const certifications = [
   {
+    id: "ielts",
     name: "IELTS Academic",
-    detail: "Overall Band 7.5 (C1)",
     issuer: "British Council / IELTS · 2026",
     icon: TbLanguage,
     tone: "sun",
     link: "https://drive.google.com/file/d/1vvswzrBTQ6oyDNxcGPo5t1OQfWVv_Ibi/view?usp=sharing",
   },
   {
+    id: "leanSixSigma",
     name: "Lean Six Sigma",
-    detail: "Yellow Belt",
     issuer: "The Council for Six Sigma Certification · 2025",
     icon: TbAward,
     tone: "sage",
   },
 ];
 
-// CEFR steps used by the language meters; "Native" fills every step.
+// CEFR steps used by the language meters; "native" fills every step.
 const cefrSteps = ["A1", "A2", "B1", "B2", "C1", "C2"];
+const languageSkills = ["listening", "reading", "speaking", "writing"];
 
 const languages = [
   {
-    language: "Spanish",
-    level: "Native",
+    id: "es",
+    level: "native",
     tone: "amber",
-    skills: { Listening: "Native", Reading: "Native", Speaking: "Native", Writing: "Native" },
+    skills: { listening: "native", reading: "native", speaking: "native", writing: "native" },
   },
   {
-    language: "English",
+    id: "en",
     level: "C1",
     tone: "azure",
     credential:
       "https://drive.google.com/file/d/1vvswzrBTQ6oyDNxcGPo5t1OQfWVv_Ibi/view?usp=sharing",
-    skills: { Listening: "C2", Reading: "C2", Speaking: "C1", Writing: "C1" },
+    skills: { listening: "C2", reading: "C2", speaking: "C1", writing: "C1" },
   },
   {
-    language: "Portuguese",
+    id: "pt",
     level: "A2",
     tone: "sage",
-    skills: { Listening: "A2", Reading: "A2", Speaking: "A2", Writing: "A2" },
+    skills: { listening: "A2", reading: "A2", speaking: "A2", writing: "A2" },
   },
 ];
 
+// Titles and citations stay in their original published language.
 const publications = [
   {
+    id: "chatbots",
     year: "2023",
     title:
       "Evaluating User Experience in Web Chatbot Interactions: A Case Study in the Colombian Context",
-    venue:
-      "Presented at the IX Iberoamerican Conference on Human Computer Interaction (JIHCI 2023).",
-    description:
-      "This research analyzes user experience in web-based chatbot interactions through a case study in the Colombian context. It evaluates usability, user perception, and interaction quality to identify improvement opportunities in conversational systems.",
     reference:
       "Muñoz, E. J., Bravo, J. D., Collazos, C. A., & Torres, D. (2023). Evaluating User Experience in Web Chatbots Interactions: A Case Study in the Colombian Context. IX Iberoamerican Conference on Human Computer Interaction (JIHCI 2023). Universidad Nacional de La Matanza (UNLaM).",
     icon: TbMessages,
     tone: "orchid",
   },
   {
+    id: "petlify",
     year: "2022",
     title:
       "Petlify: A Prototype of Hardware and Mobile Application to Reduce Nomophobia in a Controlled and Conscious Way in Young Students or Workers",
-    venue: "Published in CEUR Workshop Proceedings.",
-    description:
-      "This work presents the design and prototyping of an integrated hardware-software solution aimed at reducing nomophobia in educational and work environments. The solution combines a mobile application with a physical device to promote more conscious and controlled technology usage.",
     reference:
       "Omen, I., Daza, L. S., Muñoz, E. J., & Bravo, J. D. (2022). Petlify: A Prototype of Hardware and Mobile Application to Reduce Nomophobia in a Controlled and Conscious Way in Young Students or Workers. CEUR Workshop Proceedings.",
     icon: TbMicroscope,
@@ -383,15 +212,22 @@ const publications = [
   },
 ];
 
-const lcoyPhotos = [
-  { src: lcoyOne, alt: "LCOY Colombia group gathering" },
-  { src: lcoyTwo, alt: "LCOY Colombia methodology activity" },
-  { src: lcoyThree, alt: "LCOY Colombia youth climate activity" },
-];
+const lcoyPhotos = [lcoyOne, lcoyTwo, lcoyThree];
 
 /* ------------------------------------------------------------------ */
 /* Small building blocks                                               */
 /* ------------------------------------------------------------------ */
+
+// Renders **bold** segments of a translated string as <strong>.
+function Rich({ text }) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, index) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={index}>{part.slice(2, -2)}</strong>
+    ) : (
+      <Fragment key={index}>{part}</Fragment>
+    )
+  );
+}
 
 function Orb({ icon: Icon, tone, size = "md" }) {
   return (
@@ -415,7 +251,7 @@ function CardLabel({ children }) {
 }
 
 function LevelMeter({ level }) {
-  const filled = level === "Native" ? cefrSteps.length : cefrSteps.indexOf(level) + 1;
+  const filled = level === "native" ? cefrSteps.length : cefrSteps.indexOf(level) + 1;
   return (
     <span className="meter" aria-hidden="true">
       {cefrSteps.map((step, index) => (
@@ -425,8 +261,29 @@ function LevelMeter({ level }) {
   );
 }
 
+function LanguageSwitch({ language, onChange, label }) {
+  return (
+    <div className="lang-switch" role="group" aria-label={label}>
+      {LANGUAGES.map((option) => (
+        <button
+          key={option.code}
+          type="button"
+          lang={option.code}
+          title={option.name}
+          aria-label={option.name}
+          aria-pressed={language === option.code}
+          className={language === option.code ? "is-active" : ""}
+          onClick={() => onChange(option.code)}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 // Header dropdown with side projects: the row opens the site, the GitHub icon opens the code.
-function ProjectsMenu({ onNavigate }) {
+function ProjectsMenu({ t, onNavigate }) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -458,69 +315,92 @@ function ProjectsMenu({ onNavigate }) {
         <span className="nav-icon" aria-hidden="true">
           <TbLayoutGrid />
         </span>
-        <span className="nav-label">Projects</span>
+        <span className="nav-label">{t.nav.projects}</span>
         <TbChevronDown className="chevron" aria-hidden="true" />
       </button>
       <ul className="projects-panel" id="projects-panel" hidden={!isOpen}>
-        {projects.map((project) => (
-          <li className={`tone-${project.tone}`} key={project.title}>
-            {project.inProgress ? (
-              <span className="project-item is-pending">
-                <Orb icon={project.icon} tone={project.tone} size="sm" />
-                <span className="project-text">
-                  <strong>{project.title}</strong>
-                  <span>{project.description}</span>
-                </span>
-                <span className="soon-tag">In progress</span>
-              </span>
-            ) : (
-              <div className="project-item">
-                <a
-                  className="project-main"
-                  href={project.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => {
-                    setIsOpen(false);
-                    onNavigate();
-                  }}
-                >
+        {projects.map((project) => {
+          const text = t.projects[project.id];
+          const title = project.title ?? text.title;
+          return (
+            <li className={`tone-${project.tone}`} key={project.id}>
+              {project.inProgress ? (
+                <span className="project-item is-pending">
                   <Orb icon={project.icon} tone={project.tone} size="sm" />
                   <span className="project-text">
-                    <strong>{project.title}</strong>
-                    <span>{project.description}</span>
+                    <strong>{title}</strong>
+                    <span>{text.description}</span>
                   </span>
-                  <TbArrowUpRight className="project-arrow" aria-hidden="true" />
-                </a>
-                {project.code && (
+                  <span className="soon-tag">{t.ui.inProgress}</span>
+                </span>
+              ) : (
+                <div className="project-item">
                   <a
-                    className="project-code"
-                    href={project.code}
+                    className="project-main"
+                    href={project.href}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label={`${project.title} code on GitHub`}
-                    title="Code on GitHub"
+                    onClick={() => {
+                      setIsOpen(false);
+                      onNavigate();
+                    }}
                   >
-                    <TbBrandGithub aria-hidden="true" />
+                    <Orb icon={project.icon} tone={project.tone} size="sm" />
+                    <span className="project-text">
+                      <strong>{title}</strong>
+                      <span>{text.description}</span>
+                    </span>
+                    <TbArrowUpRight className="project-arrow" aria-hidden="true" />
                   </a>
-                )}
-              </div>
-            )}
-          </li>
-        ))}
+                  {project.code && (
+                    <a
+                      className="project-code"
+                      href={project.code}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${title}: ${t.ui.codeOnGithub}`}
+                      title={t.ui.codeOnGithub}
+                    >
+                      <TbBrandGithub aria-hidden="true" />
+                    </a>
+                  )}
+                </div>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
 }
 
-function getInitialTheme() {
+function readStored(key) {
   try {
-    const saved = window.localStorage.getItem("eljose-theme");
-    if (saved === "dark" || saved === "light") return saved === "dark";
+    return window.localStorage.getItem(key);
   } catch (error) {
-    // Storage can be blocked; fall back to the system preference.
+    // Storage can be blocked (private mode, strict settings).
+    return null;
   }
+}
+
+function writeStored(key, value) {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch (error) {
+    // Ignore storage errors; the choice still works for this visit.
+  }
+}
+
+function getInitialTheme() {
+  const saved = readStored("eljose-theme");
+  if (saved === "dark" || saved === "light") return saved === "dark";
   return window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false;
+}
+
+// English unless the visitor already picked another language.
+function getInitialLanguage() {
+  const saved = readStored("eljose-lang");
+  return translations[saved] ? saved : DEFAULT_LANGUAGE;
 }
 
 // Fades cards in the first time they scroll into view.
@@ -553,16 +433,14 @@ function useReveal() {
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(getInitialTheme);
+  const [language, setLanguage] = useState(getInitialLanguage);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = translations[language];
 
   useReveal();
 
   useEffect(() => {
-    try {
-      window.localStorage.setItem("eljose-theme", isDarkMode ? "dark" : "light");
-    } catch (error) {
-      // Ignore storage errors; the toggle still works for this visit.
-    }
+    writeStored("eljose-theme", isDarkMode ? "dark" : "light");
     const pageColor = isDarkMode ? "#0b1220" : "#f4f2ee";
     // Keeps overscroll areas and the browser bar in the same color as the page.
     document.body.style.background = pageColor;
@@ -570,7 +448,15 @@ function App() {
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", pageColor);
   }, [isDarkMode]);
 
+  useEffect(() => {
+    writeStored("eljose-lang", language);
+    document.documentElement.lang = language;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", t.meta.description);
+  }, [language, t]);
+
   const closeMenu = () => setIsMenuOpen(false);
+
+  const socialLabel = (link) => link.label ?? t.ui.email;
 
   return (
     <main className={`site-shell ${isDarkMode ? "dark-theme" : ""}`} id="home">
@@ -583,45 +469,48 @@ function App() {
         <button
           className="menu-toggle"
           type="button"
-          aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
+          aria-label={isMenuOpen ? t.ui.closeNav : t.ui.openNav}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((current) => !current)}
         >
           {isMenuOpen ? <TbX aria-hidden="true" /> : <TbMenu2 aria-hidden="true" />}
         </button>
-        <nav className={`topbar ${isMenuOpen ? "is-open" : ""}`} aria-label="Primary navigation">
+        <nav className={`topbar ${isMenuOpen ? "is-open" : ""}`} aria-label={t.nav.primary}>
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
-              <a className={`nav-link tone-${item.tone}`} key={item.href} href={item.href} onClick={closeMenu}>
+              <a className={`nav-link tone-${item.tone}`} key={item.id} href={item.href} onClick={closeMenu}>
                 <span className="nav-icon" aria-hidden="true">
                   <Icon />
                 </span>
-                <span className="nav-label">{item.label}</span>
+                <span className="nav-label">{t.nav[item.id]}</span>
                 <TbChevronRight className="chevron" aria-hidden="true" />
               </a>
             );
           })}
-          <ProjectsMenu onNavigate={closeMenu} />
-          <button
-            className="theme-toggle"
-            type="button"
-            aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-            onClick={() => setIsDarkMode((current) => !current)}
-          >
-            {isDarkMode ? <TbSun aria-hidden="true" /> : <TbMoon aria-hidden="true" />}
-            <span className="theme-label">{isDarkMode ? "Light mode" : "Dark mode"}</span>
-          </button>
+          <ProjectsMenu t={t} onNavigate={closeMenu} />
+          <div className="header-controls">
+            <LanguageSwitch language={language} onChange={setLanguage} label={t.ui.language} />
+            <button
+              className="theme-toggle"
+              type="button"
+              aria-label={isDarkMode ? t.ui.toLight : t.ui.toDark}
+              onClick={() => setIsDarkMode((current) => !current)}
+            >
+              {isDarkMode ? <TbSun aria-hidden="true" /> : <TbMoon aria-hidden="true" />}
+              <span className="theme-label">{isDarkMode ? t.ui.lightMode : t.ui.darkMode}</span>
+            </button>
+          </div>
           <div className="menu-social">
             {socialLinks.map((link) => {
               const Icon = link.icon;
               return (
                 <a
-                  key={link.label}
+                  key={link.id}
                   href={link.href}
                   target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                   rel="noreferrer"
-                  aria-label={link.label}
+                  aria-label={socialLabel(link)}
                 >
                   <Icon aria-hidden="true" />
                 </a>
@@ -633,11 +522,11 @@ function App() {
 
       <div className="page">
         {/* ---------- Hero bento ---------- */}
-        <section className="bento hero-bento" aria-label="Profile">
+        <section className="bento hero-bento" aria-label={t.ui.profile}>
           <article className="card name-card" data-reveal>
             <p className="now-pill">
               <span className="status-dot" aria-hidden="true" />
-              Now at Scotiabank · ScotiaTech
+              {t.hero.now}
             </p>
             <div>
               <h1>
@@ -645,10 +534,10 @@ function App() {
                 <br />
                 Muñoz Zuñiga
               </h1>
-              <p className="name-role">IT Business Analyst</p>
+              <p className="name-role">{t.hero.role}</p>
               <p className="name-meta">
                 <span>
-                  <TbSatellite aria-hidden="true" /> Electronic & Telecommunications Engineer
+                  <TbSatellite aria-hidden="true" /> {t.hero.engineer}
                 </span>
                 <span>
                   <TbMapPin aria-hidden="true" /> Colombia
@@ -662,60 +551,54 @@ function App() {
           </figure>
 
           <article className="card timeline-card" data-reveal style={{ "--delay": "160ms" }}>
-            <CardLabel>Experience</CardLabel>
+            <CardLabel>{t.labels.experience}</CardLabel>
             <ol className="timeline">
-              {timeline.map((item) => (
-                <li className={`tone-${item.tone}`} key={item.company}>
-                  <Orb icon={item.icon} tone={item.tone} size="sm" />
-                  <div>
-                    <h3>
-                      {item.company}
-                      {item.team && <span className="team-tag">{item.team}</span>}
-                    </h3>
-                    <p className="timeline-role">{item.role}</p>
-                    <p className="timeline-period">
-                      {item.period}
-                      {item.current && (
-                        <span className="current-chip">
-                          <span className="status-dot" aria-hidden="true" /> Current
-                        </span>
-                      )}
-                    </p>
-                    <p className="timeline-summary">{item.summary}</p>
-                  </div>
-                </li>
-              ))}
+              {timeline.map((item) => {
+                const text = t.timeline[item.id];
+                return (
+                  <li className={`tone-${item.tone}`} key={item.id}>
+                    <Orb icon={item.icon} tone={item.tone} size="sm" />
+                    <div>
+                      <h3>
+                        {item.company ?? text.company}
+                        {item.team && <span className="team-tag">{item.team}</span>}
+                      </h3>
+                      <p className="timeline-role">{item.role ?? text.role}</p>
+                      <p className="timeline-period">
+                        {text.period}
+                        {item.current && (
+                          <span className="current-chip">
+                            <span className="status-dot" aria-hidden="true" /> {t.ui.current}
+                          </span>
+                        )}
+                      </p>
+                      <p className="timeline-summary">{text.summary}</p>
+                    </div>
+                  </li>
+                );
+              })}
             </ol>
             <a className="text-link" href="#experience">
-              Full experience <TbArrowDown aria-hidden="true" />
+              {t.ui.fullExperience} <TbArrowDown aria-hidden="true" />
             </a>
           </article>
 
           <article className="card about-card" data-reveal>
-            <CardLabel>About</CardLabel>
-            <p className="lead">
-              Business Analyst and engineer with 3+ years of experience where
-              business processes, data, software and user-centered design meet.
-            </p>
+            <CardLabel>{t.labels.about}</CardLabel>
+            <p className="lead">{t.about.lead}</p>
             <p>
-              At <strong>Scotiabank (ScotiaTech)</strong> I analyze requirements for
-              payment systems, financial messaging and business-critical banking
-              platforms, including <strong>ISO 20022</strong>. In
-              <strong> SaaS/BPO</strong> environments I have built analytics, QA
-              automation and decision-support tools with <strong>Python</strong> and
-              <strong> SQL</strong>. My background in Human-Computer Interaction keeps
-              the user in view.
+              <Rich text={t.about.body} />
             </p>
           </article>
 
           <a className="card contact-card" href={`mailto:${EMAIL}`} data-reveal style={{ "--delay": "80ms" }}>
             <span className="contact-top">
-              Want to get
+              {t.ui.getInTouch[0]}
               <br />
-              in touch?
+              {t.ui.getInTouch[1]}
               <TbArrowUpRight className="contact-arrow" aria-hidden="true" />
             </span>
-            <span className="contact-cta">Email me</span>
+            <span className="contact-cta">{t.ui.emailMe}</span>
             <span className="contact-address">{EMAIL}</span>
           </a>
         </section>
@@ -723,93 +606,101 @@ function App() {
         {/* ---------- Experience ---------- */}
         <section className="section" id="experience" aria-labelledby="experience-title">
           <SectionTitle id="experience-title" icon={TbBriefcase} tone="coral">
-            Professional Experience
+            {t.sections.experience}
           </SectionTitle>
           <ol className="experience-list">
-            {experience.map((job) => (
-              <li className={`card job-card tone-${job.tone}`} key={job.company} data-reveal>
-                <div className="job-head">
-                  <Orb icon={job.icon} tone={job.tone} size="lg" />
-                  <div>
-                    <h3>
-                      {job.company}
-                      {job.team && <span className="team-tag">{job.team}</span>}
-                    </h3>
-                    <p className="job-role">{job.role}</p>
-                    <p className="meta-row">
-                      <span>
-                        <TbCalendar aria-hidden="true" /> {job.period}
-                      </span>
-                      {job.location && (
+            {experience.map((job) => {
+              const text = t.jobs[job.id];
+              return (
+                <li className={`card job-card tone-${job.tone}`} key={job.id} data-reveal>
+                  <div className="job-head">
+                    <Orb icon={job.icon} tone={job.tone} size="lg" />
+                    <div>
+                      <h3>
+                        {job.company}
+                        {job.team && <span className="team-tag">{job.team}</span>}
+                      </h3>
+                      <p className="job-role">{job.role}</p>
+                      <p className="meta-row">
                         <span>
-                          <TbMapPin aria-hidden="true" /> {job.location}
+                          <TbCalendar aria-hidden="true" /> {text.period}
                         </span>
-                      )}
-                      {job.current && (
-                        <span className="current-chip">
-                          <span className="status-dot" aria-hidden="true" /> Current
-                        </span>
-                      )}
-                    </p>
+                        {text.location && (
+                          <span>
+                            <TbMapPin aria-hidden="true" /> {text.location}
+                          </span>
+                        )}
+                        {job.current && (
+                          <span className="current-chip">
+                            <span className="status-dot" aria-hidden="true" /> {t.ui.current}
+                          </span>
+                        )}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <ul className="job-highlights">
-                  {job.highlights.map((item, index) => {
-                    const Icon = item.icon;
-                    return (
-                      <li key={index}>
-                        <span className="bullet-icon" aria-hidden="true">
-                          <Icon />
-                        </span>
-                        <p>{item.content}</p>
-                      </li>
-                    );
-                  })}
-                </ul>
-                <div className="tag-row">
-                  {job.tags.map((tag) => (
-                    <span className="chip" key={tag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </li>
-            ))}
+                  <ul className="job-highlights">
+                    {text.highlights.map((highlight, index) => {
+                      const Icon = job.highlightIcons[index];
+                      return (
+                        <li key={index}>
+                          <span className="bullet-icon" aria-hidden="true">
+                            <Icon />
+                          </span>
+                          <p>
+                            <Rich text={highlight} />
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <div className="tag-row">
+                    {text.tags.map((tag) => (
+                      <span className="chip" key={tag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </li>
+              );
+            })}
           </ol>
         </section>
 
         {/* ---------- Skills, education, certifications, languages ---------- */}
         <section className="section" id="skills" aria-labelledby="skills-title">
           <SectionTitle id="skills-title" icon={TbTools} tone="azure">
-            Skills & Education
+            {t.sections.skillsEducation}
           </SectionTitle>
           <div className="bento skills-bento">
             <article className="card expertise-card" data-reveal>
-              <CardLabel>Technical & professional skills</CardLabel>
+              <CardLabel>{t.labels.skills}</CardLabel>
               <div className="expertise-list">
-                {skillGroups.map((group) => (
-                  <div className={`expertise-group tone-${group.tone}`} key={group.title}>
-                    <h3>
-                      <Orb icon={group.icon} tone={group.tone} size="xs" />
-                      {group.title}
-                    </h3>
-                    <div className="tag-row">
-                      {group.items.map((item) => (
-                        <span className="chip" key={item}>
-                          {item}
-                        </span>
-                      ))}
+                {skillGroups.map((group) => {
+                  const text = t.skills[group.id];
+                  return (
+                    <div className={`expertise-group tone-${group.tone}`} key={group.id}>
+                      <h3>
+                        <Orb icon={group.icon} tone={group.tone} size="xs" />
+                        {text.title}
+                      </h3>
+                      <div className="tag-row">
+                        {text.items.map((item) => (
+                          <span className="chip" key={item}>
+                            {item}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </article>
 
             <article className="card education-card tone-teal" id="education" data-reveal>
-              <CardLabel>Education</CardLabel>
+              <CardLabel>{t.labels.education}</CardLabel>
               <div className="education-head">
                 <span className="university-logo">
-                  <img src={unicaucaEmblem} alt="Universidad del Cauca emblem" />
+                  <img src={unicaucaEmblem} alt={t.education.emblemAlt} />
                 </span>
                 <div>
                   <h3 className="university-name">
@@ -817,7 +708,7 @@ function App() {
                       Universidad del Cauca <TbArrowUpRight aria-hidden="true" />
                     </a>
                   </h3>
-                  <p className="degree-name">Electronic and Telecommunications Engineering</p>
+                  <p className="degree-name">{t.education.degree}</p>
                   <p className="meta-row">
                     <span>
                       <TbMapPin aria-hidden="true" /> Popayán, Colombia
@@ -829,31 +720,27 @@ function App() {
                 </div>
               </div>
               <div className="tag-row">
-                <span className="chip">Telematics & Project Management emphasis</span>
-                <span className="chip">IDIS Research Group · HCI</span>
+                <span className="chip">{t.education.emphasis}</span>
+                <span className="chip">{t.education.research}</span>
               </div>
               <p>
-                Engineering background in <strong>information and communication technologies</strong>,
-                including <strong>software analysis</strong>, <strong>databases</strong>,
-                <strong> networks</strong>, computing, and telecommunications systems,
-                with an emphasis on <strong>Human-Computer Interaction (HCI)</strong>:
-                user experience, digital behavior and user-centered design.
+                <Rich text={t.education.body} />
               </p>
             </article>
 
             <article className="card cert-card" data-reveal>
-              <CardLabel>Certifications</CardLabel>
+              <CardLabel>{t.labels.certifications}</CardLabel>
               <ul className="cert-list">
                 {certifications.map((certification) => (
-                  <li className={`tone-${certification.tone}`} key={certification.name}>
+                  <li className={`tone-${certification.tone}`} key={certification.id}>
                     <Orb icon={certification.icon} tone={certification.tone} size="sm" />
                     <div>
                       <h3>{certification.name}</h3>
-                      <p className="cert-detail">{certification.detail}</p>
+                      <p className="cert-detail">{t.certifications[certification.id].detail}</p>
                       <p className="cert-issuer">{certification.issuer}</p>
                       {certification.link && (
                         <a className="text-link" href={certification.link} target="_blank" rel="noreferrer">
-                          View credential <TbArrowUpRight aria-hidden="true" />
+                          {t.ui.viewCredential} <TbArrowUpRight aria-hidden="true" />
                         </a>
                       )}
                     </div>
@@ -863,33 +750,37 @@ function App() {
             </article>
 
             <article className="card language-card" id="languages" data-reveal>
-              <CardLabel>Languages · CEFR</CardLabel>
+              <CardLabel>{t.labels.languages}</CardLabel>
               <ul className="language-list">
-                {languages.map((language) => (
-                  <li className={`tone-${language.tone}`} key={language.language}>
-                    <div className="language-head">
-                      <h3>{language.language}</h3>
-                      {language.credential ? (
-                        <a className="level-badge" href={language.credential} target="_blank" rel="noreferrer">
-                          {language.level} <TbArrowUpRight aria-hidden="true" />
-                        </a>
-                      ) : (
-                        <span className="level-badge">{language.level}</span>
-                      )}
-                    </div>
-                    <dl className="language-skills">
-                      {Object.entries(language.skills).map(([skill, level]) => (
-                        <div key={skill}>
-                          <dt>{skill}</dt>
-                          <dd>
-                            <LevelMeter level={level} />
-                            <span>{level}</span>
-                          </dd>
-                        </div>
-                      ))}
-                    </dl>
-                  </li>
-                ))}
+                {languages.map((item) => {
+                  const levelLabel = (level) => (level === "native" ? t.languages.native : level);
+                  return (
+                    <li className={`tone-${item.tone}`} key={item.id}>
+                      <div className="language-head">
+                        <h3>{t.languages.names[item.id]}</h3>
+                        {item.credential ? (
+                          <a className="level-badge" href={item.credential} target="_blank" rel="noreferrer">
+                            {levelLabel(item.level)} <TbArrowUpRight aria-hidden="true" />
+                          </a>
+                        ) : (
+                          <span className="level-badge">{levelLabel(item.level)}</span>
+                        )}
+                      </div>
+                      <dl className="language-skills">
+                        {languageSkills.map((skill) => (
+                          <div key={skill}>
+                            <dt>{t.languages.skills[skill]}</dt>
+                            <dd>
+                              <LevelMeter level={item.skills[skill]} />
+                              {/* Native rows show only the full bar; the badge already says it */}
+                              {item.skills[skill] !== "native" && <span>{item.skills[skill]}</span>}
+                            </dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </li>
+                  );
+                })}
               </ul>
             </article>
           </div>
@@ -898,50 +789,55 @@ function App() {
         {/* ---------- Publications ---------- */}
         <section className="section" id="publications" aria-labelledby="publications-title">
           <SectionTitle id="publications-title" icon={TbBook2} tone="orchid">
-            Research & Publications
+            {t.sections.publications}
           </SectionTitle>
           <div className="bento two-up">
-            {publications.map((publication) => (
-              <article className={`card publication-card tone-${publication.tone}`} key={publication.title} data-reveal>
-                <div className="publication-top">
-                  <Orb icon={publication.icon} tone={publication.tone} />
-                  <span className="year-tag">{publication.year}</span>
-                </div>
-                <h3>{publication.title}</h3>
-                <p className="publication-venue">{publication.venue}</p>
-                <p>{publication.description}</p>
-                <p className="publication-reference">{publication.reference}</p>
-              </article>
-            ))}
+            {publications.map((publication) => {
+              const text = t.publications[publication.id];
+              return (
+                <article
+                  className={`card publication-card tone-${publication.tone}`}
+                  key={publication.id}
+                  data-reveal
+                >
+                  <div className="publication-top">
+                    <Orb icon={publication.icon} tone={publication.tone} />
+                    <span className="year-tag">{publication.year}</span>
+                  </div>
+                  <h3 lang="en">{publication.title}</h3>
+                  <p className="publication-venue">{text.venue}</p>
+                  <p>{text.description}</p>
+                  <p className="publication-reference" lang="en">
+                    {publication.reference}
+                  </p>
+                </article>
+              );
+            })}
           </div>
         </section>
 
         {/* ---------- Volunteering ---------- */}
         <section className="section" id="volunteering" aria-labelledby="volunteering-title">
           <SectionTitle id="volunteering-title" icon={TbLeaf} tone="sage">
-            Leadership & Volunteering
+            {t.sections.volunteering}
           </SectionTitle>
           <div className="bento volunteer-bento">
             <article className="card volunteer-card tone-sage" data-reveal>
               <div className="education-head">
                 <Orb icon={TbLeaf} tone="sage" />
                 <div>
-                  <h3>LCOY Colombia · Logistics & Methodology Team</h3>
+                  <h3>{t.volunteering.lcoy.title}</h3>
                   <p className="meta-row">
                     <span>
-                      <TbCalendar aria-hidden="true" /> October 2025 - November 2025
+                      <TbCalendar aria-hidden="true" /> {t.volunteering.lcoy.period}
                     </span>
                   </p>
                 </div>
               </div>
-              <p>
-                Supported operational coordination, team logistics, and methodology
-                activities for a youth climate conference, helping align participants,
-                working sessions, and organizational needs.
-              </p>
-              <div className="volunteer-photos" aria-label="LCOY photos">
-                {lcoyPhotos.map((photo) => (
-                  <img key={photo.src} src={photo.src} alt={photo.alt} loading="lazy" />
+              <p>{t.volunteering.lcoy.body}</p>
+              <div className="volunteer-photos" aria-label={t.volunteering.lcoy.photosLabel}>
+                {lcoyPhotos.map((src, index) => (
+                  <img key={src} src={src} alt={t.volunteering.lcoy.photos[index]} loading="lazy" />
                 ))}
               </div>
             </article>
@@ -952,16 +848,12 @@ function App() {
                   <h3>IEEE AESS · Universidad del Cauca</h3>
                   <p className="meta-row">
                     <span>
-                      <TbCalendar aria-hidden="true" /> June 2020 - August 2022
+                      <TbCalendar aria-hidden="true" /> {t.volunteering.ieee.period}
                     </span>
                   </p>
                 </div>
               </div>
-              <p>
-                Participated in scientific outreach and educational activities for
-                schools and children, supporting initiatives that made engineering and
-                science more accessible to younger audiences.
-              </p>
+              <p>{t.volunteering.ieee.body}</p>
             </article>
           </div>
         </section>
@@ -969,14 +861,14 @@ function App() {
         {/* ---------- What I bring ---------- */}
         <section className="section" id="principles" aria-labelledby="principles-title">
           <SectionTitle id="principles-title" icon={TbHeartHandshake} tone="amber">
-            What I Bring
+            {t.sections.principles}
           </SectionTitle>
           <ul className="card principles" data-reveal>
             {principles.map((item) => (
-              <li className={`tone-${item.tone}`} key={item.area}>
+              <li className={`tone-${item.tone}`} key={item.id}>
                 <Orb icon={item.icon} tone={item.tone} />
-                <span className="principle-area">{item.area}</span>
-                <span className="principle-word">{item.value}</span>
+                <span className="principle-area">{t.principles[item.id].area}</span>
+                <span className="principle-word">{t.principles[item.id].value}</span>
               </li>
             ))}
           </ul>
@@ -984,9 +876,9 @@ function App() {
 
         <footer className="card footer">
           <p>
-            © 2026 Elmer Jose Muñoz Zuñiga · Updated October 2026
+            © 2026 Elmer Jose Muñoz Zuñiga · {t.footer.updated}
             <span className="star-wars-line">
-              <FaJedi aria-hidden="true" /> May the data be with you.
+              <FaJedi aria-hidden="true" /> {t.footer.starWars}
             </span>
           </p>
           <div className="social-links">
@@ -994,12 +886,12 @@ function App() {
               const Icon = link.icon;
               return (
                 <a
-                  key={link.label}
+                  key={link.id}
                   href={link.href}
                   target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                   rel="noreferrer"
-                  aria-label={link.label}
-                  title={link.label}
+                  aria-label={socialLabel(link)}
+                  title={socialLabel(link)}
                 >
                   <Icon aria-hidden="true" />
                 </a>
@@ -1009,7 +901,7 @@ function App() {
         </footer>
       </div>
 
-      <a className="back-to-top" href="#home" aria-label="Back to top">
+      <a className="back-to-top" href="#home" aria-label={t.ui.backToTop}>
         <TbArrowUp aria-hidden="true" />
       </a>
     </main>
