@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/eljose/static/css/main.54c7526a.css",
-    "main.js": "/eljose/static/js/main.b43bd628.js",
+    "main.css": "/eljose/static/css/main.2eee1ad2.css",
+    "main.js": "/eljose/static/js/main.5964d84c.js",
     "static/js/787.1ed0c42c.chunk.js": "/eljose/static/js/787.1ed0c42c.chunk.js",
     "static/media/lcoy-1.jpg": "/eljose/static/media/lcoy-1.33091009de9c17b8b231.jpg",
     "static/media/profile.jpg": "/eljose/static/media/profile.e96d1c19bbd2524aed59.jpg",
@@ -9,12 +9,12 @@
     "static/media/lcoy-3.jpg": "/eljose/static/media/lcoy-3.8a0ae3e7d7b75f16b1f7.jpg",
     "static/media/unicauca-emblem.png": "/eljose/static/media/unicauca-emblem.f6460c3c60159544f093.png",
     "index.html": "/eljose/index.html",
-    "main.54c7526a.css.map": "/eljose/static/css/main.54c7526a.css.map",
-    "main.b43bd628.js.map": "/eljose/static/js/main.b43bd628.js.map",
+    "main.2eee1ad2.css.map": "/eljose/static/css/main.2eee1ad2.css.map",
+    "main.5964d84c.js.map": "/eljose/static/js/main.5964d84c.js.map",
     "787.1ed0c42c.chunk.js.map": "/eljose/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54c7526a.css",
-    "static/js/main.b43bd628.js"
+    "static/css/main.2eee1ad2.css",
+    "static/js/main.5964d84c.js"
   ]
 }
